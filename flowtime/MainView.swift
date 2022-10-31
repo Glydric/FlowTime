@@ -18,30 +18,34 @@ enum ButtonSize {
     static let height: CGFloat = WindowSize.height;
 }
 
-struct ContentView: View {
+var isRelaxing = false;
+
+struct MainView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
     @State var isRunning = false;
-    @State var isRelaxing = false;
 
 
     var body: some View {
 
-//        isRelaxing ?
         VStack {
-
             Text("\(watch.duration.minuteSecond)")
                     .font(.system(size: 64))
             HStack {
                 isRunning ? Button(action: stop, label: {
-//                    Text("Pause")
-                    Image(systemName: "stop")
+                    Image(systemName: "pause")
+                    Text("Pause")
                 })
-                        : Button("Start", action: start)
-                Button("Reset", action: reset)
+                        : Button(action: start, label: {
+                    Image(systemName: "play")
+                    Text("Start")
+                })
+                Button(action: reset, label: {
+                    Image(systemName: "arrow.uturn.backward")
+                    Text("Reset")
+                })
             }
-                    .font(.title)
+//                    .font(.title)
             Button("Riposati per \(watch.pause.minuteSecond)", action: relax)
-//        } : VStack {
 
         }
                 .frame(minWidth: WindowSize.width, minHeight: WindowSize.height)
@@ -70,6 +74,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }
