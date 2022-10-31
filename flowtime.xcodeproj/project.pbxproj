@@ -11,9 +11,10 @@
 		E235A6F7F5CE4C117A3E1AD9 /* flowtimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */; };
 		E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235AD7098CB9282A5F78251 /* flowtimeApp.swift */; };
 		E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A966A487DDD9269A5925 /* Preview Assets.xcassets */; };
+		E235A9F6DD3B93B155FA13E6 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */; };
 		E235AC4AC379FFD523180184 /* flowtimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A13AE1536173ED58E560 /* flowtimeUITests.swift */; };
 		E235AE6A034EAFB33D1BF507 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */; };
-		E235AEF1A8421627CE43BC82 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A5F97735E660021A3246 /* ContentView.swift */; };
+		E235AEF1A8421627CE43BC82 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A5F97735E660021A3246 /* MainView.swift */; };
 		E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A3A3C489DEE558496ED5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +40,8 @@
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
-		E235A5F97735E660021A3246 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E235A5F97735E660021A3246 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E235A84B19DDBA284D04163A /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
 		E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flowtime.entitlements; sourceTree = "<group>"; };
@@ -103,9 +105,10 @@
 				E235A3A3C489DEE558496ED5 /* Assets.xcassets */,
 				E235A5543850EECBC5ED2A20 /* Preview Content */,
 				E235AD7098CB9282A5F78251 /* flowtimeApp.swift */,
-				E235A5F97735E660021A3246 /* ContentView.swift */,
+				E235A5F97735E660021A3246 /* MainView.swift */,
 				E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */,
 				E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */,
+				E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */,
 			);
 			path = flowtime;
 			sourceTree = "<group>";
@@ -245,8 +248,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */,
-				E235AEF1A8421627CE43BC82 /* ContentView.swift in Sources */,
+				E235AEF1A8421627CE43BC82 /* MainView.swift in Sources */,
 				E235AE6A034EAFB33D1BF507 /* StopWatch.swift in Sources */,
+				E235A9F6DD3B93B155FA13E6 /* RelaxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
