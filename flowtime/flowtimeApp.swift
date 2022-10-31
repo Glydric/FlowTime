@@ -10,9 +10,15 @@ import SwiftUI
 
 @main
 struct flowtimeApp: App {
+    @State var isRelaxing = false;
+
     var body: some Scene {
         WindowGroup {
-            MainView()
+            if (isRelaxing) {
+                RelaxView()
+            } else {
+                MainView(isRelaxing: $isRelaxing)
+            }
         }
     }
 }
