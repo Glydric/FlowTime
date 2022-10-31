@@ -6,6 +6,10 @@ import SwiftUI
 
 struct RelaxView: View {
     var body: some View {
-        Text("Relaxing")
+        VStack {
+            Text("Relaxing").font(.title)
+        }
+                .frame(minWidth: WindowSize.width, minHeight: WindowSize.height)
+                .padding(8)
     }
 }
