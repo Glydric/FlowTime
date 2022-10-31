@@ -9,14 +9,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var watch = StopWatch();
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Start", action: start)
+            Button("Stop", action: stop)
+            Text(String(watch.duration))
         }
         .padding()
+    }
+
+    func stop(){
+        watch.updateDuration();
+    }
+    func start(){
+        watch.start();
     }
 }
 

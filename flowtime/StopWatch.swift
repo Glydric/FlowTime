@@ -4,14 +4,24 @@
 
 import Foundation
 
-class StopWatch{
-    let begin: Date;
+extension UInt64{
+    var nsToSeconds: Int { Int(self) / 1000000000 }
+}
 
-    public init(){
-        self.begin = Date.now;
+class StopWatch: ObservableObject{
+    var begin = DispatchTime.now();
+    @Published var _duration: UInt64?;
+    var duration: Int{
+        (_duration ?? 0).nsToSeconds
     }
 
-    public func getDiffFromNow(){
 
-}
+    public func start(){
+        begin = DispatchTime.now();
+
+    }
+
+    public func updateDuration()  {
+        _duration = DispatchTime.now().uptimeNanoseconds - begin.uptimeNanoseconds
+    }
 }
