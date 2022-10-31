@@ -9,19 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var watch = StopWatch();
+    @ObservedObject var watch: StopWatch = StopWatch();
+    var isOn = true;
 
     var body: some View {
         VStack {
             Button("Start", action: start)
             Button("Stop", action: stop)
-            Text(String(watch.duration))
+            Text("begin on \(watch.begin)")
+            Text("seconds \(Int(watch.duration))")
         }
         .padding()
     }
 
     func stop(){
-        watch.updateDuration();
     }
     func start(){
         watch.start();

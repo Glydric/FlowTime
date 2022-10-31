@@ -27,19 +27,24 @@ extension TimeInterval {
 
 
 class StopWatch: ObservableObject{
+    var timer = Timer();
     var begin = Date.now;
-    @Published var _duration: TimeInterval?;
-    var duration: Int{
-        (_duration ?? 0).second
+    @Published private(set) var duration = 0;
+
+    init(){
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
 
 
+//    var duration: Int{
+//
+//    }
+
+    @objc func update() {
+        duration+=1;
+    }
     public func start(){
-        begin = Date.now;
-
-    }
-
-    public func updateDuration()  {
-        _duration = begin.distance(to: Date.now)
+//        begin = Date.now;
+        print(timer.isValid)
     }
 }
