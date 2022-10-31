@@ -4,24 +4,42 @@
 
 import Foundation
 
-extension UInt64{
-    var nsToSeconds: Int { Int(self) / 1000000000 }
+extension TimeInterval {
+    var hourMinuteSecondMS: String {
+        String(format:"%d:%02d:%02d.%03d", hour, minute, second, millisecond)
+    }
+    var minuteSecondMS: String {
+        String(format:"%d:%02d.%03d", minute, second, millisecond)
+    }
+    var hour: Int {
+        Int((self/3600).truncatingRemainder(dividingBy: 3600))
+    }
+    var minute: Int {
+        Int((self/60).truncatingRemainder(dividingBy: 60))
+    }
+    var second: Int {
+        Int(truncatingRemainder(dividingBy: 60))
+    }
+    var millisecond: Int {
+        Int((self*1000).truncatingRemainder(dividingBy: 1000))
+    }
 }
 
+
 class StopWatch: ObservableObject{
-    var begin = DispatchTime.now();
-    @Published var _duration: UInt64?;
+    var begin = Date.now;
+    @Published var _duration: TimeInterval?;
     var duration: Int{
-        (_duration ?? 0).nsToSeconds
+        (_duration ?? 0).second
     }
 
 
     public func start(){
-        begin = DispatchTime.now();
+        begin = Date.now;
 
     }
 
     public func updateDuration()  {
-        _duration = DispatchTime.now().uptimeNanoseconds - begin.uptimeNanoseconds
+        _duration = begin.distance(to: Date.now)
     }
 }
