@@ -10,31 +10,43 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
-    var isOn = true;
+    @State var isRunning = false;
+    @State var isRelaxing = false;
 
     var body: some View {
+//        isRelaxing ?
         VStack {
+            Text("\(watch.duration.minuteSecond)")
+                    .font(.title)
             HStack {
-                Button("Start", action: start)
-                Button("Stop", action: stop)
+                isRunning ? Button("Stop", action: stop)
+                        : Button("Start", action: start)
                 Button("Reset", action: reset)
             }
-            Text("Durate \(watch.duration.hourMinuteSecond)")
-            Text("Puoi riposarti per \(watch.pause.hourMinuteSecond)")
+                    .font(.title2)
+            Button("Riposati per \(watch.pause.minuteSecond)", action: relax)
+//        } : VStack {
+
         }
-                .padding()
+                .padding(8)
+    }
+
+    func relax() {
     }
 
     func reset() {
         watch.reset();
+        isRunning = false;
     }
 
     func stop() {
         watch.stop();
+        isRunning = false;
     }
 
     func start() {
         watch.start();
+        isRunning = true;
     }
 }
 
