@@ -28,10 +28,14 @@ struct ContentView: View {
 
 //        isRelaxing ?
         VStack {
+
             Text("\(watch.duration.minuteSecond)")
                     .font(.system(size: 64))
             HStack {
-                isRunning ? Button("Stop",action: stop)
+                isRunning ? Button(action: stop, label: {
+//                    Text("Pause")
+                    Image(systemName: "stop")
+                })
                         : Button("Start", action: start)
                 Button("Reset", action: reset)
             }
