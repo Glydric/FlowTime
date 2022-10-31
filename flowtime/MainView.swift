@@ -18,12 +18,11 @@ enum ButtonSize {
     static let height: CGFloat = WindowSize.height;
 }
 
-var isRelaxing = false;
 
 struct MainView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
     @State var isRunning = false;
-
+    @Binding var isRelaxing: Bool;
 
     var body: some View {
 
@@ -54,6 +53,7 @@ struct MainView: View {
 
 
     func relax() {
+        isRelaxing = true;
     }
 
     func reset() {
@@ -69,11 +69,5 @@ struct MainView: View {
     func start() {
         watch.start();
         isRunning = true;
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
     }
 }
