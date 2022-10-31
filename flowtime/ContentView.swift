@@ -14,17 +14,26 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Button("Start", action: start)
-            Button("Stop", action: stop)
-            Text("begin on \(watch.begin)")
-            Text("seconds \(Int(watch.duration))")
+            HStack {
+                Button("Start", action: start)
+                Button("Stop", action: stop)
+                Button("Reset", action: reset)
+            }
+            Text("Durate \(watch.duration.hourMinuteSecond)")
+            Text("Puoi riposarti per \(watch.pause.hourMinuteSecond)")
         }
-        .padding()
+                .padding()
     }
 
-    func stop(){
+    func reset() {
+        watch.reset();
     }
-    func start(){
+
+    func stop() {
+        watch.stop();
+    }
+
+    func start() {
         watch.start();
     }
 }

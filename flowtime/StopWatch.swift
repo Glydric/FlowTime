@@ -5,11 +5,8 @@
 import Foundation
 
 extension TimeInterval {
-    var hourMinuteSecondMS: String {
-        String(format:"%d:%02d:%02d.%03d", hour, minute, second, millisecond)
-    }
-    var minuteSecondMS: String {
-        String(format:"%d:%02d.%03d", minute, second, millisecond)
+    var hourMinuteSecond: String {
+        String(format:"%d:%02d:%02d", hour, minute, second)
     }
     var hour: Int {
         Int((self/3600).truncatingRemainder(dividingBy: 3600))
@@ -28,23 +25,34 @@ extension TimeInterval {
 
 class StopWatch: ObservableObject{
     var timer = Timer();
-    var begin = Date.now;
-    @Published private(set) var duration = 0;
+
+    @Published private(set) var seconds: Int = 0;
+    var duration: TimeInterval {
+        TimeInterval(seconds)
+    }
+    var pause: TimeInterval{
+        TimeInterval(seconds/5)
+    }
 
     init(){
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        start()
     }
 
-
-//    var duration: Int{
-//
-//    }
-
-    @objc func update() {
-        duration+=1;
+    @objc private func update() {
+        seconds+=1;
     }
+
+    public func reset(){
+        seconds = 0
+        start()
+    }
+
+    public func stop(){
+        timer.invalidate()
+    }
+
     public func start(){
-//        begin = Date.now;
-        print(timer.isValid)
+        stop()
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
 }
