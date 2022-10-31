@@ -8,6 +8,11 @@ extension TimeInterval {
     var hourMinuteSecond: String {
         String(format: "%d:%02d:%02d", hour, minute, second)
     }
+    var minuteSecond: String {
+        hour == 0
+                ? String(format: "%02d:%02d", minute, second)
+                : hourMinuteSecond
+    }
     var hour: Int {
         Int((self / 3600).truncatingRemainder(dividingBy: 3600))
     }
@@ -34,17 +39,13 @@ class StopWatch: ObservableObject {
         TimeInterval(seconds / 5)
     }
 
-    init() {
-        start()
-    }
-
     @objc private func update() {
         seconds += 1;
     }
 
     public func reset() {
         seconds = 0
-        start()
+        stop()
     }
 
     public func stop() {
