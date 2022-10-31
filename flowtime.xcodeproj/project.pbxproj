@@ -36,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		E235A13AE1536173ED58E560 /* flowtimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITests.swift; sourceTree = "<group>"; };
+		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		E235A5F97735E660021A3246 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 				E235A81AEA604FC11221F86E /* flowtime */,
 				E235A7E10883E370BF468123 /* flowtimeTests */,
 				E235A80BB15FC03F8A40BDDB /* flowtimeUITests */,
+				E235A2E9DA4B1155047D1E46 /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
