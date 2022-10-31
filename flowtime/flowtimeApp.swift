@@ -12,7 +12,7 @@ import SwiftUI
 struct flowtimeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
