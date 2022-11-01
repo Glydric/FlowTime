@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E235A0A493EA67894A28833D /* flowtimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A84B19DDBA284D04163A /* flowtimeTests.swift */; };
 		E235A6F7F5CE4C117A3E1AD9 /* flowtimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */; };
+		E235A7217BC09FAAA3E4F58A /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A718E52974B5121A5906 /* TimeIntervalExtension.swift */; };
 		E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235AD7098CB9282A5F78251 /* flowtimeApp.swift */; };
 		E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A966A487DDD9269A5925 /* Preview Assets.xcassets */; };
 		E235A9F6DD3B93B155FA13E6 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */; };
@@ -42,6 +43,7 @@
 		E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		E235A5F97735E660021A3246 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
+		E235A718E52974B5121A5906 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E235A84B19DDBA284D04163A /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
 		E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flowtime.entitlements; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */,
 				E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */,
 				E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */,
+				E235A718E52974B5121A5906 /* TimeIntervalExtension.swift */,
 			);
 			path = flowtime;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				E235AEF1A8421627CE43BC82 /* MainView.swift in Sources */,
 				E235AE6A034EAFB33D1BF507 /* StopWatch.swift in Sources */,
 				E235A9F6DD3B93B155FA13E6 /* RelaxView.swift in Sources */,
+				E235A7217BC09FAAA3E4F58A /* TimeIntervalExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
