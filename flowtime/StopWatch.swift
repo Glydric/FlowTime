@@ -14,7 +14,7 @@ class StopWatch: ObservableObject {
     var duration: TimeInterval {
         TimeInterval(seconds)
     }
-    var pause: TimeInterval {
+    var relaxDuration: TimeInterval {
         TimeInterval(seconds / 5)
     }
 
