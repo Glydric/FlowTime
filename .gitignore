@@ -96,7 +96,7 @@ build/
 
 # .pbxproj https://stackoverflow.com/questions/8026429/should-i-git-ignore-xcodeproject-project-pbxproj-file
 
-project.pbxproj
+*.pbxproj
 
 # .mode1v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html
 
