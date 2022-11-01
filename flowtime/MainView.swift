@@ -16,7 +16,7 @@ enum WindowSize {
 struct MainView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
     @State var isRunning = false;
-    @Binding var isRelaxing: Bool;
+    @Binding var relaxingTime: TimeInterval;
 
     var body: some View {
         GeometryReader { geometry in
@@ -24,7 +24,6 @@ struct MainView: View {
             VStack {
                 Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
                 Text("\(watch.duration.minuteSecond)")
-                        //                        .font(.system(size: 64))
                         .font(.system(size: calcFontTitle(size: geometry.size)))
                 HStack {
                     isRunning ?
@@ -44,7 +43,7 @@ struct MainView: View {
                 }
                 Button(action: relax) {
                     Image(systemName: "cup.and.saucer.fill")
-                    Text("Riposati per \(watch.pause.minuteSecond)")
+                    Text("Riposati per \(watch.relaxDuration.minuteSecond)")
                 }
             }
                     .padding(8)
@@ -58,7 +57,7 @@ struct MainView: View {
     }
 
     func relax() {
-        isRelaxing = true;
+        relaxingTime = watch.relaxDuration
         reset()
     }
 

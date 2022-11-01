@@ -10,14 +10,14 @@ import SwiftUI
 
 @main
 struct flowtimeApp: App {
-    @State var isRelaxing = false;
+    @State var relaxingTime: TimeInterval = 0;
 
     var body: some Scene {
         WindowGroup {
-            if (isRelaxing) {
-                RelaxView()
+            if (relaxingTime != 0) {
+                RelaxView(time: relaxingTime)
             } else {
-                MainView(isRelaxing: $isRelaxing)
+                MainView(relaxingTime: $relaxingTime)
             }
         }
     }
