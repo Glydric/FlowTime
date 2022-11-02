@@ -13,8 +13,8 @@ class StopWatch: ObservableObject {
     }
 
     init(_ seconds: Int) {
-        self.rawSeconds = seconds
-        self.timer = Timer()
+        rawSeconds = seconds
+        timer = Timer()
     }
 
     convenience init() {
