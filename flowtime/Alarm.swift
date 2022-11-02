@@ -4,23 +4,22 @@
 
 import Foundation
 
-class Alarm: ObservableObject {
-    private var timer = Timer()
-    @Published private(set) var seconds: TimeInterval;
-
-    convenience init(_ seconds: Int) {
-        self.init(TimeInterval(seconds));
+class Alarm: StopWatch {
+    convenience init(_ duration: TimeInterval) {
+        self.init(duration.second)
     }
 
-    init(_ seconds: TimeInterval) {
-        self.seconds = seconds;
+    init(_ duration: Int) {
+        super.init()
+        super.seconds = duration
         start()
     }
 
-    @objc private func update() {
-    }
+    override func update() {
+        super.seconds -= 1
 
-    public func start() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        if (seconds == 0) {
+            stop()
+        }
     }
 }
