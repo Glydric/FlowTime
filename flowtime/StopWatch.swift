@@ -5,7 +5,7 @@
 import Foundation
 
 class StopWatch: ObservableObject {
-    var timer = Timer();
+    private var timer = Timer();
 
     @Published private(set) var seconds: Int = 0;
     var duration: TimeInterval {
