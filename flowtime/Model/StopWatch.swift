@@ -5,7 +5,7 @@
 import Foundation
 
 class StopWatch: ObservableObject {
-    private var timer = Timer()
+    private var timer: Timer
     @Published private(set) var seconds: Int
 
     var duration: TimeInterval {
@@ -14,6 +14,7 @@ class StopWatch: ObservableObject {
 
     init(_ seconds: Int) {
         self.seconds = seconds
+        self.timer = Timer()
     }
 
     convenience init() {
@@ -30,10 +31,10 @@ class StopWatch: ObservableObject {
     }
 
     func decrement() {
-        seconds -= 1
-
         if (seconds == 0) {
             stop()
+        } else {
+            seconds -= 1
         }
     }
 
