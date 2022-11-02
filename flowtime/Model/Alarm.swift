@@ -6,7 +6,7 @@ import Foundation
 
 class Alarm: StopWatch {
     convenience init(_ duration: TimeInterval) {
-        self.init(duration.second)
+        self.init(duration.allSeconds)
     }
 
     override init(_ duration: Int) {
