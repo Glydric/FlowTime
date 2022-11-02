@@ -4,9 +4,6 @@
 
 import Foundation
 
-
-
-
 class StopWatch: ObservableObject {
     var timer = Timer();
 
