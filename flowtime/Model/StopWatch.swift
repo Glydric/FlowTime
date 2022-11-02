@@ -8,6 +8,10 @@ class StopWatch: ObservableObject {
     private var timer = Timer()
     @Published private(set) var seconds: Int
 
+    var duration: TimeInterval {
+        TimeInterval(seconds)
+    }
+
     init(_ seconds: Int) {
         self.seconds = seconds
     }
@@ -16,9 +20,6 @@ class StopWatch: ObservableObject {
         self.init(0)
     }
 
-    var duration: TimeInterval {
-        TimeInterval(seconds)
-    }
 
     @objc func update() {
         increment()
