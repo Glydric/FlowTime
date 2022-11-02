@@ -21,14 +21,14 @@ class StopWatch: ObservableObject {
     }
 
     @objc func update() {
-        incrementSeconds()
+        increment()
     }
 
-    func incrementSeconds() {
+    func increment() {
         seconds += 1
     }
 
-    func decrementSeconds() {
+    func decrement() {
         seconds -= 1
 
         if (seconds == 0) {

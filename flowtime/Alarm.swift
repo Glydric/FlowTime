@@ -15,6 +15,6 @@ class Alarm: StopWatch {
     }
 
     override func update() {
-        incrementSeconds()
+        decrement()
     }
 }
