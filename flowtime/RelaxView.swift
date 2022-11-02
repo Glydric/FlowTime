@@ -5,13 +5,13 @@
 import SwiftUI
 
 struct RelaxView: View {
-    let time: TimeInterval;
+    @ObservedObject var alarm: Alarm;
 
     var body: some View {
         VStack {
-            Text("Relaxing for \(time)").font(.title)
+            Text("Relaxing for \(alarm.seconds)").font(.title)
         }
                 .frame(minWidth: WindowSize.width, minHeight: WindowSize.height)
                 .padding(8)
-    }
+    }//TODO relaxing view
 }
