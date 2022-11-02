@@ -6,14 +6,14 @@ import Foundation
 
 class StopWatch: ObservableObject {
     private var timer = Timer();
-    @Published private var seconds: Int = 0;
-
-    @objc private func update() {
-        seconds += 1;
-    }
+    @Published public var seconds: Int = 0;
 
     var duration: TimeInterval {
         TimeInterval(seconds)
+    }
+
+    @objc func update() {
+        seconds += 1;
     }
 
     var relaxDuration: TimeInterval {
