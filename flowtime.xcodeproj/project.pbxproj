@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E235A00B4FDEC234691BB9E4 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A6F9FF93B2BE635AE21A /* Alarm.swift */; };
 		E235A0A493EA67894A28833D /* flowtimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A84B19DDBA284D04163A /* flowtimeTests.swift */; };
+		E235A1B8476A59A9D13C4A15 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A1B123E4A7FFD9C825FD /* Alarm.swift */; };
 		E235A6F7F5CE4C117A3E1AD9 /* flowtimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */; };
-		E235A7217BC09FAAA3E4F58A /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A718E52974B5121A5906 /* TimeIntervalExtension.swift */; };
+		E235A7D9E8896C8B61C871C8 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A8B08506E858C688372C /* StopWatch.swift */; };
 		E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235AD7098CB9282A5F78251 /* flowtimeApp.swift */; };
+		E235A91C0CCCCFD998A0747B /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A47336AF32810D1A41AB /* RelaxView.swift */; };
 		E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A966A487DDD9269A5925 /* Preview Assets.xcassets */; };
-		E235A9F6DD3B93B155FA13E6 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */; };
+		E235AB932BAADD6E85CE2220 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A91AE512B57317EAFA0A /* MainView.swift */; };
+		E235AC0EE1166D77B991713F /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */; };
 		E235AC4AC379FFD523180184 /* flowtimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A13AE1536173ED58E560 /* flowtimeUITests.swift */; };
-		E235AE6A034EAFB33D1BF507 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */; };
-		E235AEF1A8421627CE43BC82 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A5F97735E660021A3246 /* MainView.swift */; };
 		E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A3A3C489DEE558496ED5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -39,17 +39,17 @@
 
 /* Begin PBXFileReference section */
 		E235A13AE1536173ED58E560 /* flowtimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITests.swift; sourceTree = "<group>"; };
+		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
-		E235A5F97735E660021A3246 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
-		E235A6F9FF93B2BE635AE21A /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		E235A718E52974B5121A5906 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
+		E235A47336AF32810D1A41AB /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E235A84B19DDBA284D04163A /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
+		E235A8B08506E858C688372C /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flowtime.entitlements; sourceTree = "<group>"; };
+		E235A91AE512B57317EAFA0A /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		E235A966A487DDD9269A5925 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		E235AD7098CB9282A5F78251 /* flowtimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,12 +109,9 @@
 				E235A3A3C489DEE558496ED5 /* Assets.xcassets */,
 				E235A5543850EECBC5ED2A20 /* Preview Content */,
 				E235AD7098CB9282A5F78251 /* flowtimeApp.swift */,
-				E235A5F97735E660021A3246 /* MainView.swift */,
 				E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */,
-				E235A3FDDD99C1E58DD71EEE /* StopWatch.swift */,
-				E235A6DF5E0E6A34A53C5FD5 /* RelaxView.swift */,
-				E235A718E52974B5121A5906 /* TimeIntervalExtension.swift */,
-				E235A6F9FF93B2BE635AE21A /* Alarm.swift */,
+				E235AEB833C07D82F1F0E545 /* Model */,
+				E235AABD6770013BB3CAF3C7 /* View */,
 			);
 			path = flowtime;
 			sourceTree = "<group>";
@@ -126,6 +123,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E235AABD6770013BB3CAF3C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E235A91AE512B57317EAFA0A /* MainView.swift */,
+				E235A47336AF32810D1A41AB /* RelaxView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E235AE077519EBC6FD6002C1 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +141,16 @@
 				E235A80BB15FC03F8A40BDDB /* flowtimeUITests */,
 				E235A2E9DA4B1155047D1E46 /* LICENSE */,
 			);
+			sourceTree = "<group>";
+		};
+		E235AEB833C07D82F1F0E545 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E235A1B123E4A7FFD9C825FD /* Alarm.swift */,
+				E235A8B08506E858C688372C /* StopWatch.swift */,
+				E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,11 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */,
-				E235AEF1A8421627CE43BC82 /* MainView.swift in Sources */,
-				E235AE6A034EAFB33D1BF507 /* StopWatch.swift in Sources */,
-				E235A9F6DD3B93B155FA13E6 /* RelaxView.swift in Sources */,
-				E235A7217BC09FAAA3E4F58A /* TimeIntervalExtension.swift in Sources */,
-				E235A00B4FDEC234691BB9E4 /* Alarm.swift in Sources */,
+				E235A1B8476A59A9D13C4A15 /* Alarm.swift in Sources */,
+				E235A7D9E8896C8B61C871C8 /* StopWatch.swift in Sources */,
+				E235AC0EE1166D77B991713F /* TimeIntervalExtension.swift in Sources */,
+				E235AB932BAADD6E85CE2220 /* MainView.swift in Sources */,
+				E235A91C0CCCCFD998A0747B /* RelaxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
