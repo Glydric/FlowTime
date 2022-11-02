@@ -7,11 +7,21 @@ import SwiftUI
 struct RelaxView: View {
     @ObservedObject var alarm: Alarm;
 
+    func calcFontTitle(size: CGSize) -> CGFloat {
+        min(size.width / 4, size.height / 3)
+    }
+
     var body: some View {
-        VStack {
-            Text("Relaxing for \(alarm.seconds)").font(.title)
+        GeometryReader { geometry in
+            VStack {
+                Text(alarm.duration.minuteSecond)
+                        .font(.system(size: calcFontTitle(size: geometry.size)))
+            }
+                    .padding(8)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
                 .frame(minWidth: WindowSize.width, minHeight: WindowSize.height)
-                .padding(8)
-    }//TODO relaxing view
+    }
+
 }
+
