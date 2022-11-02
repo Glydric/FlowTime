@@ -15,7 +15,7 @@ struct flowtimeApp: App {
     var body: some Scene {
         WindowGroup {
             if (relaxingTime != 0) {
-                RelaxView(alarm: Alarm(relaxingTime))
+                RelaxView(time: $relaxingTime)
             } else {
                 MainView(relaxingTime: $relaxingTime)
             }

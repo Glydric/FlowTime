@@ -6,14 +6,14 @@ import Foundation
 
 class StopWatch: ObservableObject {
     private var timer: Timer
-    @Published private(set) var seconds: Int
+    @Published private(set) var rawSeconds: Int
 
     var duration: TimeInterval {
-        TimeInterval(seconds)
+        TimeInterval(rawSeconds)
     }
 
     init(_ seconds: Int) {
-        self.seconds = seconds
+        self.rawSeconds = seconds
         self.timer = Timer()
     }
 
@@ -27,19 +27,19 @@ class StopWatch: ObservableObject {
     }
 
     func increment() {
-        seconds += 1
+        rawSeconds += 1
     }
 
     func decrement() {
-        if (seconds == 0) {
+        if (rawSeconds == 0) {
             stop()
         } else {
-            seconds -= 1
+            rawSeconds -= 1
         }
     }
 
     var relaxDuration: TimeInterval {
-        TimeInterval(seconds / 5)
+        TimeInterval(rawSeconds / 5)
     }
 
     public func stop() {
@@ -47,7 +47,7 @@ class StopWatch: ObservableObject {
     }
 
     public func reset() {
-        seconds = 0
+        rawSeconds = 0
         stop()
     }
 
