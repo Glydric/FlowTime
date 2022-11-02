@@ -25,4 +25,7 @@ extension TimeInterval {
     var millisecond: Int {
         Int((self * 1000).truncatingRemainder(dividingBy: 1000))
     }
+    var allSeconds: Int {
+        hour * 60 * 60 + minute * 60 + second
+    }
 }
