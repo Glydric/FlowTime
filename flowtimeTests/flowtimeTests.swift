@@ -19,7 +19,13 @@ final class flowtimeTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func AlarmTest() throws {
+        alarm = Alarm(100)
+        assert(condition: alarm.seconds == 100, message: "Alarm not correctly initialized with 100 seconds")
+
+    }
+
+    func stopWatchTest() throws {
         watch = StopWatch()
     }
 
