@@ -22,7 +22,7 @@ struct MainView: View {
         GeometryReader { geometry in
 
             VStack {
-                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
+//                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
                 Text("\(watch.duration.minuteSecond)")
                         .font(.system(size: calcFontTitle(size: geometry.size)))
                 HStack {
