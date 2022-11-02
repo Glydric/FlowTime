@@ -9,17 +9,12 @@ class Alarm: StopWatch {
         self.init(duration.second)
     }
 
-    init(_ duration: Int) {
-        super.init()
-        super.seconds = duration
+    override init(_ duration: Int) {
+        super.init(duration)
         start()
     }
 
     override func update() {
-        super.seconds -= 1
-
-        if (seconds == 0) {
-            stop()
-        }
+        incrementSeconds()
     }
 }

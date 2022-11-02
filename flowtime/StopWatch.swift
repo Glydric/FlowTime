@@ -5,15 +5,35 @@
 import Foundation
 
 class StopWatch: ObservableObject {
-    private var timer = Timer();
-    @Published public var seconds: Int = 0;
+    private var timer = Timer()
+    @Published private(set) var seconds: Int
+
+    init(_ seconds: Int) {
+        self.seconds = seconds
+    }
+
+    convenience init() {
+        self.init(0)
+    }
 
     var duration: TimeInterval {
         TimeInterval(seconds)
     }
 
     @objc func update() {
-        seconds += 1;
+        incrementSeconds()
+    }
+
+    func incrementSeconds() {
+        seconds += 1
+    }
+
+    func decrementSeconds() {
+        seconds -= 1
+
+        if (seconds == 0) {
+            stop()
+        }
     }
 
     var relaxDuration: TimeInterval {
