@@ -10,7 +10,7 @@ struct RelaxView: View {
 
     init(time: Binding<TimeInterval>) {
         self._relaxingTime = time
-        alarm = Alarm(time.wrappedValue)
+        alarm = SoundAlarm(time.wrappedValue)
     }
 
     func calcFontTitle(size: CGSize) -> CGFloat {
