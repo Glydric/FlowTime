@@ -4,7 +4,7 @@
 
 import Foundation
 
-public class Alarm: StopWatch {
+class Alarm: StopWatch {
     convenience init(_ duration: TimeInterval) {
         self.init(duration.allSeconds)
     }
