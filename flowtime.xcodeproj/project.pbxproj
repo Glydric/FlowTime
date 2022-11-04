@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851244ED291444A30062A08A /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 851244EC291444A30062A08A /* audio.wav */; };
 		E235A0A493EA67894A28833D /* flowtimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A84B19DDBA284D04163A /* flowtimeTests.swift */; };
 		E235A1B8476A59A9D13C4A15 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A1B123E4A7FFD9C825FD /* Alarm.swift */; };
 		E235A6F7F5CE4C117A3E1AD9 /* flowtimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */; };
@@ -15,6 +16,7 @@
 		E235A91C0CCCCFD998A0747B /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A47336AF32810D1A41AB /* RelaxView.swift */; };
 		E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A966A487DDD9269A5925 /* Preview Assets.xcassets */; };
 		E235AB932BAADD6E85CE2220 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A91AE512B57317EAFA0A /* MainView.swift */; };
+		E235ABF5CA38A7871D2C561A /* SoundAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A4661E20BE210162AAF8 /* SoundAlarm.swift */; };
 		E235AC0EE1166D77B991713F /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */; };
 		E235AC4AC379FFD523180184 /* flowtimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A13AE1536173ED58E560 /* flowtimeUITests.swift */; };
 		E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A3A3C489DEE558496ED5 /* Assets.xcassets */; };
@@ -38,10 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851244EC291444A30062A08A /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
 		E235A13AE1536173ED58E560 /* flowtimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITests.swift; sourceTree = "<group>"; };
 		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E235A4661E20BE210162AAF8 /* SoundAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundAlarm.swift; sourceTree = "<group>"; };
 		E235A47336AF32810D1A41AB /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		E235A780CEB8950CE3C2C43A /* flowtimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E235A84B19DDBA284D04163A /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				E235A3A3C489DEE558496ED5 /* Assets.xcassets */,
 				E235A5543850EECBC5ED2A20 /* Preview Content */,
 				E235AD7098CB9282A5F78251 /* flowtimeApp.swift */,
+				851244EC291444A30062A08A /* audio.wav */,
 				E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */,
 				E235AEB833C07D82F1F0E545 /* Model */,
 				E235AABD6770013BB3CAF3C7 /* View */,
@@ -149,6 +154,7 @@
 				E235A1B123E4A7FFD9C825FD /* Alarm.swift */,
 				E235A8B08506E858C688372C /* StopWatch.swift */,
 				E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */,
+				E235A4661E20BE210162AAF8 /* SoundAlarm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */,
+				851244ED291444A30062A08A /* audio.wav in Resources */,
 				E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +292,7 @@
 				E235AC0EE1166D77B991713F /* TimeIntervalExtension.swift in Sources */,
 				E235AB932BAADD6E85CE2220 /* MainView.swift in Sources */,
 				E235A91C0CCCCFD998A0747B /* RelaxView.swift in Sources */,
+				E235ABF5CA38A7871D2C561A /* SoundAlarm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +352,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -387,7 +395,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 0.1;
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
