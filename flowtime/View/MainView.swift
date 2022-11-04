@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum DefaultWindowSize {
+enum MinWindowSize {
     static let width: CGFloat = 350;
     static let height: CGFloat = 250;
 }
@@ -49,7 +49,7 @@ struct MainView: View {
                     .padding(8)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-                .frame(minWidth: DefaultWindowSize.width, minHeight: DefaultWindowSize.height)
+                .frame(minWidth: MinWindowSize.width, minHeight: MinWindowSize.height)
     }
 
     func calcFontTitle(size: CGSize) -> CGFloat {
