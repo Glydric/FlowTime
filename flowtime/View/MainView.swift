@@ -57,9 +57,11 @@ struct MainView: View {
     }
 
     func beginRelaxing() {
-        total = total.advanced(by: watch.relaxDuration)
         relaxingTime = watch.relaxDuration
-        watch.reset()
+        if (relaxingTime != 0) {
+            total = total.advanced(by: watch.duration)
+        }
+        print(total)
     }
 
 }
