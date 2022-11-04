@@ -206,10 +206,9 @@
 			};
 			buildConfigurationList = E235AB8CF3AC2F5AA1719F22 /* Build configuration list for PBXProject "flowtime" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
