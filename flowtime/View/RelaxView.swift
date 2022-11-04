@@ -31,7 +31,7 @@ struct RelaxView: View {
                     .padding(8)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-                .frame(minWidth: DefaultWindowSize.width, minHeight: DefaultWindowSize.height)
+                .frame(minWidth: MinWindowSize.width, minHeight: MinWindowSize.height)
     }
 
 }
