@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		851244ED291444A30062A08A /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 851244EC291444A30062A08A /* audio.wav */; };
-		85BF40672915015500D5EB9D /* flowtimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF40662915015500D5EB9D /* flowtimeTests.swift */; };
+		85A78BA6291509FF006FE93B /* FlowTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A78BA5291509FF006FE93B /* FlowTimeTests.swift */; };
 		E235A1B8476A59A9D13C4A15 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A1B123E4A7FFD9C825FD /* Alarm.swift */; };
 		E235A7D9E8896C8B61C871C8 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A8B08506E858C688372C /* StopWatch.swift */; };
 		E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235AD7098CB9282A5F78251 /* flowtimeApp.swift */; };
@@ -21,19 +21,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		85BF40682915015500D5EB9D /* PBXContainerItemProxy */ = {
+		85A78BA7291509FF006FE93B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E235A2A15C5458D826188975 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E235A3E3577E3C0327A1E9FD;
-			remoteInfo = flowtime;
+			remoteInfo = FlowTime;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		851244EC291444A30062A08A /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
-		85BF40642915015500D5EB9D /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85BF40662915015500D5EB9D /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
+		85A78BA3291509FF006FE93B /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85A78BA5291509FF006FE93B /* FlowTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTimeTests.swift; sourceTree = "<group>"; };
 		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85BF40612915015500D5EB9D /* Frameworks */ = {
+		85A78BA0291509FF006FE93B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,12 +65,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85BF40652915015500D5EB9D /* flowtimeTests */ = {
+		85A78BA4291509FF006FE93B /* FlowTimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				85BF40662915015500D5EB9D /* flowtimeTests.swift */,
+				85A78BA5291509FF006FE93B /* FlowTimeTests.swift */,
 			);
-			path = flowtimeTests;
+			path = FlowTimeTests;
 			sourceTree = "<group>";
 		};
 		E235A5543850EECBC5ED2A20 /* Preview Content */ = {
@@ -98,7 +98,7 @@
 		E235AA996FF2F06BE6E0A84F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85BF40642915015500D5EB9D /* FlowTimeTests.xctest */,
+				85A78BA3291509FF006FE93B /* FlowTimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 		E235AE077519EBC6FD6002C1 = {
 			isa = PBXGroup;
 			children = (
-				85BF40652915015500D5EB9D /* flowtimeTests */,
+				85A78BA4291509FF006FE93B /* FlowTimeTests */,
 				E235AA996FF2F06BE6E0A84F /* Products */,
 				E235A81AEA604FC11221F86E /* flowtime */,
 				E235A2E9DA4B1155047D1E46 /* LICENSE */,
@@ -136,22 +136,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85BF40632915015500D5EB9D /* FlowTimeTests */ = {
+		85A78BA2291509FF006FE93B /* FlowTimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85BF406A2915015500D5EB9D /* Build configuration list for PBXNativeTarget "FlowTimeTests" */;
+			buildConfigurationList = 85A78BA9291509FF006FE93B /* Build configuration list for PBXNativeTarget "FlowTimeTests" */;
 			buildPhases = (
-				85BF40602915015500D5EB9D /* Sources */,
-				85BF40612915015500D5EB9D /* Frameworks */,
-				85BF40622915015500D5EB9D /* Resources */,
+				85A78B9F291509FF006FE93B /* Sources */,
+				85A78BA0291509FF006FE93B /* Frameworks */,
+				85A78BA1291509FF006FE93B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85BF40692915015500D5EB9D /* PBXTargetDependency */,
+				85A78BA8291509FF006FE93B /* PBXTargetDependency */,
 			);
 			name = FlowTimeTests;
-			productName = flowtimeTests;
-			productReference = 85BF40642915015500D5EB9D /* FlowTimeTests.xctest */;
+			productName = FlowTimeTests;
+			productReference = 85A78BA3291509FF006FE93B /* FlowTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E235A3E3577E3C0327A1E9FD /* FlowTime */ = {
@@ -179,10 +179,11 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					85BF40632915015500D5EB9D = {
+					85A78BA2291509FF006FE93B = {
 						CreatedOnToolsVersion = 14.1;
 						DevelopmentTeam = KC68A42FB9;
 						ProvisioningStyle = Automatic;
+						TestTargetID = E235A3E3577E3C0327A1E9FD;
 					};
 					E235A3E3577E3C0327A1E9FD = {
 						DevelopmentTeam = KC68A42FB9;
@@ -204,13 +205,13 @@
 			projectRoot = "";
 			targets = (
 				E235A3E3577E3C0327A1E9FD /* FlowTime */,
-				85BF40632915015500D5EB9D /* FlowTimeTests */,
+				85A78BA2291509FF006FE93B /* FlowTimeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		85BF40622915015500D5EB9D /* Resources */ = {
+		85A78BA1291509FF006FE93B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -230,11 +231,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85BF40602915015500D5EB9D /* Sources */ = {
+		85A78B9F291509FF006FE93B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BF40672915015500D5EB9D /* flowtimeTests.swift in Sources */,
+				85A78BA6291509FF006FE93B /* FlowTimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,48 +256,49 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85BF40692915015500D5EB9D /* PBXTargetDependency */ = {
+		85A78BA8291509FF006FE93B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E235A3E3577E3C0327A1E9FD /* FlowTime */;
-			targetProxy = 85BF40682915015500D5EB9D /* PBXContainerItemProxy */;
+			targetProxy = 85A78BA7291509FF006FE93B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		85BF406B2915015500D5EB9D /* Debug */ = {
+		85A78BAA291509FF006FE93B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KC68A42FB9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtimeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.FlowTimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlowTime";
 			};
 			name = Debug;
 		};
-		85BF406C2915015500D5EB9D /* Release */ = {
+		85A78BAB291509FF006FE93B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KC68A42FB9;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtimeTests;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.FlowTimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlowTime";
 			};
 			name = Release;
 		};
@@ -501,11 +503,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85BF406A2915015500D5EB9D /* Build configuration list for PBXNativeTarget "FlowTimeTests" */ = {
+		85A78BA9291509FF006FE93B /* Build configuration list for PBXNativeTarget "FlowTimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85BF406B2915015500D5EB9D /* Debug */,
-				85BF406C2915015500D5EB9D /* Release */,
+				85A78BAA291509FF006FE93B /* Debug */,
+				85A78BAB291509FF006FE93B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
