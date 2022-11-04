@@ -5,11 +5,11 @@
 import Foundation
 import AVFoundation
 
-class SoundAlarm: Alarm {
+public class SoundAlarm: Alarm {
     private let soundFileURL = Bundle.main.url(forResource: "audio", withExtension: "wav")!
     private let player: AVAudioPlayer
 
-    override init(_ duration: Int) {
+    public override init(_ duration: Int) {
         player = try! AVAudioPlayer(contentsOf: soundFileURL)
         super.init(duration)
     }

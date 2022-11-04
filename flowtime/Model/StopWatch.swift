@@ -4,7 +4,7 @@
 
 import Foundation
 
-class StopWatch: ObservableObject {
+public class StopWatch: ObservableObject {
     private var timer: Timer
     @Published private(set) var rawSeconds: Int
 
