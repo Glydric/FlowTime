@@ -10,11 +10,7 @@ class SoundAlarm: Alarm {
     private let player: AVAudioPlayer
 
     override init(_ duration: Int) {
-        do {
-            player = try! AVAudioPlayer(contentsOf: soundFileURL)
-        } catch let error {
-            print(error.localizedDescription)
-        }
+        player = try! AVAudioPlayer(contentsOf: soundFileURL)
         super.init(duration)
     }
 
