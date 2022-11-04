@@ -5,8 +5,9 @@
 import Foundation
 
 class StopWatch: ObservableObject {
-    private var timer: Timer
+    private(set) var timer: Timer
     @Published private(set) var rawSeconds: Int
+    @Published var isPaused: Bool = false;
 
     var duration: TimeInterval {
         TimeInterval(rawSeconds)
@@ -15,6 +16,7 @@ class StopWatch: ObservableObject {
     init(_ seconds: Int) {
         rawSeconds = seconds
         timer = Timer()
+        updateIsPaused()
     }
 
     convenience init() {
@@ -44,6 +46,7 @@ class StopWatch: ObservableObject {
 
     public func stop() {
         timer.invalidate()
+        updateIsPaused()
     }
 
     public func reset() {
@@ -55,5 +58,10 @@ class StopWatch: ObservableObject {
         // riavvia il timer
         stop()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        updateIsPaused()
+    }
+
+    public func updateIsPaused() {
+        isPaused = !timer.isValid
     }
 }
