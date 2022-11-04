@@ -16,14 +16,21 @@ enum MinWindowSize {
 struct MainView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
     @Binding var relaxingTime: TimeInterval;
-    @State var total: TimeInterval = 0;
+    @Binding var total: TimeInterval;
 
     var body: some View {
         GeometryReader { geometry in
             VStack {
+                Text("Tempo di studio totale\n\(total.hourMinuteSecond)")
+                        .font(.title2)
 //                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
                 Text("\(watch.duration.minuteSecond)")
-                        .font(.system(size: calcFontTitle(size: geometry.size)))
+                        .font(Font.custom(
+                                "Monaco",
+//                                TODO add ConcertOne-Regular.ttf
+                                size: calcFontTitle(size: geometry.size)
+                        )).padding(8)
+
                 HStack {
                     watch.isPaused ?
                             Button(action: watch.start, label: {
@@ -44,9 +51,7 @@ struct MainView: View {
                     Image(systemName: "cup.and.saucer.fill")
                     Text("Riposati per \(watch.relaxDuration.minuteSecond)")
                 }
-                Text("Somma sessioni \(total.hourMinuteSecond)")
             }
-                    .padding(8)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
                 .frame(minWidth: MinWindowSize.width, minHeight: MinWindowSize.height)
@@ -61,7 +66,6 @@ struct MainView: View {
         if (relaxingTime != 0) {
             total = total.advanced(by: watch.duration)
         }
-        print(total)
     }
 
 }
