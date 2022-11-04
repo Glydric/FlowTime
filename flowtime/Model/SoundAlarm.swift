@@ -6,13 +6,18 @@ import Foundation
 import AVFoundation
 
 class SoundAlarm: Alarm {
-    let soundFileURL = Bundle.main.url(forResource: "audio", withExtension: "wav")!
+    private let soundFileURL = Bundle.main.url(forResource: "audio", withExtension: "wav")!
+    private let player: AVAudioPlayer
 
-    func play() throws {
+    override init(_ duration: Int) {
+        player = try! AVAudioPlayer(contentsOf: soundFileURL)
+        super.init(duration)
+    }
+
+    func play() {
         do {
-            let player = try AVAudioPlayer(contentsOf: soundFileURL)
             player.prepareToPlay()
-            player.play()
+            print(player.play())
         } catch let error {
             print(error.localizedDescription)
         }
@@ -21,7 +26,7 @@ class SoundAlarm: Alarm {
     override func update() {
         super.update()
         if (super.rawSeconds == 0) {
-            try! play()
+            play()
         }
     }
 
