@@ -32,7 +32,7 @@
 
 /* Begin PBXFileReference section */
 		851244EC291444A30062A08A /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
-		85BF40642915015500D5EB9D /* flowtimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = flowtimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85BF40642915015500D5EB9D /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BF40662915015500D5EB9D /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
 		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		E235AA996FF2F06BE6E0A84F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85BF40642915015500D5EB9D /* flowtimeTests.xctest */,
+				85BF40642915015500D5EB9D /* FlowTimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,9 +136,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85BF40632915015500D5EB9D /* flowtimeTests */ = {
+		85BF40632915015500D5EB9D /* FlowTimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85BF406A2915015500D5EB9D /* Build configuration list for PBXNativeTarget "flowtimeTests" */;
+			buildConfigurationList = 85BF406A2915015500D5EB9D /* Build configuration list for PBXNativeTarget "FlowTimeTests" */;
 			buildPhases = (
 				85BF40602915015500D5EB9D /* Sources */,
 				85BF40612915015500D5EB9D /* Frameworks */,
@@ -149,14 +149,14 @@
 			dependencies = (
 				85BF40692915015500D5EB9D /* PBXTargetDependency */,
 			);
-			name = flowtimeTests;
+			name = FlowTimeTests;
 			productName = flowtimeTests;
-			productReference = 85BF40642915015500D5EB9D /* flowtimeTests.xctest */;
+			productReference = 85BF40642915015500D5EB9D /* FlowTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E235A3E3577E3C0327A1E9FD /* flowtime */ = {
+		E235A3E3577E3C0327A1E9FD /* FlowTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E235A76115B1518E85466D43 /* Build configuration list for PBXNativeTarget "flowtime" */;
+			buildConfigurationList = E235A76115B1518E85466D43 /* Build configuration list for PBXNativeTarget "FlowTime" */;
 			buildPhases = (
 				E235A7CA46E0A64F7254C4F7 /* Sources */,
 				E235ABF9AAF2C19826924D2A /* Frameworks */,
@@ -166,7 +166,7 @@
 			);
 			dependencies = (
 			);
-			name = flowtime;
+			name = FlowTime;
 			productName = flowtime;
 			productType = "com.apple.product-type.application";
 		};
@@ -204,8 +204,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E235A3E3577E3C0327A1E9FD /* flowtime */,
-				85BF40632915015500D5EB9D /* flowtimeTests */,
+				E235A3E3577E3C0327A1E9FD /* FlowTime */,
+				85BF40632915015500D5EB9D /* FlowTimeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,7 +258,7 @@
 /* Begin PBXTargetDependency section */
 		85BF40692915015500D5EB9D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E235A3E3577E3C0327A1E9FD /* flowtime */;
+			target = E235A3E3577E3C0327A1E9FD /* FlowTime */;
 			targetProxy = 85BF40682915015500D5EB9D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -506,7 +506,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85BF406A2915015500D5EB9D /* Build configuration list for PBXNativeTarget "flowtimeTests" */ = {
+		85BF406A2915015500D5EB9D /* Build configuration list for PBXNativeTarget "FlowTimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				85BF406B2915015500D5EB9D /* Debug */,
@@ -515,7 +515,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E235A76115B1518E85466D43 /* Build configuration list for PBXNativeTarget "flowtime" */ = {
+		E235A76115B1518E85466D43 /* Build configuration list for PBXNativeTarget "FlowTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E235A2D534390BD5CF946BA6 /* Debug */,
