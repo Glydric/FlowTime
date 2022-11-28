@@ -8,12 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		858394872915AF7200A30017 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 858394862915AF7200A30017 /* ConcertOne-Regular.ttf */; };
-		85A78BA6291509FF006FE93B /* FlowTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A78BA5291509FF006FE93B /* FlowTimeTests.swift */; };
 		E235A1B8476A59A9D13C4A15 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A1B123E4A7FFD9C825FD /* Alarm.swift */; };
 		E235A7D9E8896C8B61C871C8 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A8B08506E858C688372C /* StopWatch.swift */; };
 		E235A8D9C66FD715C8461246 /* flowtimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235AD7098CB9282A5F78251 /* flowtimeApp.swift */; };
 		E235A91C0CCCCFD998A0747B /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A47336AF32810D1A41AB /* RelaxView.swift */; };
-		E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A966A487DDD9269A5925 /* Preview Assets.xcassets */; };
 		E235AB932BAADD6E85CE2220 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A91AE512B57317EAFA0A /* MainView.swift */; };
 		E235ABF5CA38A7871D2C561A /* SoundAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A4661E20BE210162AAF8 /* SoundAlarm.swift */; };
 		E235AC0EE1166D77B991713F /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */; };
@@ -22,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		85A78BA7291509FF006FE93B /* PBXContainerItemProxy */ = {
+		857050D82935569D007013D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E235A2A15C5458D826188975 /* Project object */;
 			proxyType = 1;
@@ -32,10 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		857050D42935569D007013D0 /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		857050D62935569D007013D0 /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
 		858394862915AF7200A30017 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
 		858394882915B07600A30017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = FlowTime/Info.plist; sourceTree = "<group>"; };
-		85A78BA3291509FF006FE93B /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		85A78BA5291509FF006FE93B /* FlowTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTimeTests.swift; sourceTree = "<group>"; };
 		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,14 +42,13 @@
 		E235A8B08506E858C688372C /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = flowtime.entitlements; sourceTree = "<group>"; };
 		E235A91AE512B57317EAFA0A /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		E235A966A487DDD9269A5925 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E235AB61C4963668604D60B6 /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
 		E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		E235AD7098CB9282A5F78251 /* flowtimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		85A78BA0291509FF006FE93B /* Frameworks */ = {
+		857050D12935569D007013D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -68,27 +65,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85A78BA4291509FF006FE93B /* FlowTimeTests */ = {
+		857050D52935569D007013D0 /* FlowTimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				85A78BA5291509FF006FE93B /* FlowTimeTests.swift */,
+				857050D62935569D007013D0 /* flowtimeTests.swift */,
 			);
 			path = FlowTimeTests;
-			sourceTree = "<group>";
-		};
-		E235A5543850EECBC5ED2A20 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				E235A966A487DDD9269A5925 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		E235A81AEA604FC11221F86E /* flowtime */ = {
 			isa = PBXGroup;
 			children = (
 				E235A3A3C489DEE558496ED5 /* Assets.xcassets */,
-				E235A5543850EECBC5ED2A20 /* Preview Content */,
 				E235AD7098CB9282A5F78251 /* flowtimeApp.swift */,
 				E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */,
 				E235AEB833C07D82F1F0E545 /* Model */,
@@ -101,7 +89,7 @@
 		E235AA996FF2F06BE6E0A84F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				85A78BA3291509FF006FE93B /* FlowTimeTests.xctest */,
+				857050D42935569D007013D0 /* FlowTimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				858394882915B07600A30017 /* Info.plist */,
-				85A78BA4291509FF006FE93B /* FlowTimeTests */,
+				857050D52935569D007013D0 /* FlowTimeTests */,
 				E235AA996FF2F06BE6E0A84F /* Products */,
 				E235A81AEA604FC11221F86E /* flowtime */,
 				E235A2E9DA4B1155047D1E46 /* LICENSE */,
@@ -149,22 +137,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		85A78BA2291509FF006FE93B /* FlowTimeTests */ = {
+		857050D32935569D007013D0 /* FlowTimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85A78BA9291509FF006FE93B /* Build configuration list for PBXNativeTarget "FlowTimeTests" */;
+			buildConfigurationList = 857050DC2935569D007013D0 /* Build configuration list for PBXNativeTarget "FlowTimeTests" */;
 			buildPhases = (
-				85A78B9F291509FF006FE93B /* Sources */,
-				85A78BA0291509FF006FE93B /* Frameworks */,
-				85A78BA1291509FF006FE93B /* Resources */,
+				857050D02935569D007013D0 /* Sources */,
+				857050D12935569D007013D0 /* Frameworks */,
+				857050D22935569D007013D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				85A78BA8291509FF006FE93B /* PBXTargetDependency */,
+				857050D92935569D007013D0 /* PBXTargetDependency */,
 			);
 			name = FlowTimeTests;
 			productName = FlowTimeTests;
-			productReference = 85A78BA3291509FF006FE93B /* FlowTimeTests.xctest */;
+			productReference = 857050D42935569D007013D0 /* FlowTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E235A3E3577E3C0327A1E9FD /* FlowTime */ = {
@@ -192,7 +180,7 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					85A78BA2291509FF006FE93B = {
+					857050D32935569D007013D0 = {
 						CreatedOnToolsVersion = 14.1;
 						DevelopmentTeam = KC68A42FB9;
 						ProvisioningStyle = Automatic;
@@ -219,13 +207,13 @@
 			projectRoot = "";
 			targets = (
 				E235A3E3577E3C0327A1E9FD /* FlowTime */,
-				85A78BA2291509FF006FE93B /* FlowTimeTests */,
+				857050D32935569D007013D0 /* FlowTimeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		85A78BA1291509FF006FE93B /* Resources */ = {
+		857050D22935569D007013D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -238,7 +226,6 @@
 			files = (
 				E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */,
 				858394872915AF7200A30017 /* ConcertOne-Regular.ttf in Resources */,
-				E235A93436EF93F57D42B947 /* Preview Assets.xcassets in Resources */,
 				E235AE0FFC0B99875A1F0B52 /* audio.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,11 +233,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85A78B9F291509FF006FE93B /* Sources */ = {
+		857050D02935569D007013D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85A78BA6291509FF006FE93B /* FlowTimeTests.swift in Sources */,
+				857050D72935569D007013D0 /* flowtimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,15 +258,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		85A78BA8291509FF006FE93B /* PBXTargetDependency */ = {
+		857050D92935569D007013D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E235A3E3577E3C0327A1E9FD /* FlowTime */;
-			targetProxy = 85A78BA7291509FF006FE93B /* PBXContainerItemProxy */;
+			targetProxy = 857050D82935569D007013D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		85A78BAA291509FF006FE93B /* Debug */ = {
+		857050DA2935569D007013D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -298,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		85A78BAB291509FF006FE93B /* Release */ = {
+		857050DB2935569D007013D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -321,13 +308,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = flowtime/flowtime.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"flowtime/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "flowtime/Resources/ConcertOne-Regular.ttf";
 				DEVELOPMENT_TEAM = KC68A42FB9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = NO;
@@ -365,13 +355,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = flowtime/flowtime.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"flowtime/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "flowtime/Resources/ConcertOne-Regular.ttf";
 				DEVELOPMENT_TEAM = KC68A42FB9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = NO;
@@ -522,11 +515,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		85A78BA9291509FF006FE93B /* Build configuration list for PBXNativeTarget "FlowTimeTests" */ = {
+		857050DC2935569D007013D0 /* Build configuration list for PBXNativeTarget "FlowTimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				85A78BAA291509FF006FE93B /* Debug */,
-				85A78BAB291509FF006FE93B /* Release */,
+				857050DA2935569D007013D0 /* Debug */,
+				857050DB2935569D007013D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
