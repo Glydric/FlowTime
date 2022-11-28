@@ -17,6 +17,7 @@ struct MainView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
     @Binding var relaxingTime: TimeInterval;
     @Binding var total: TimeInterval;
+    @Binding var record: TimeInterval;
 
     var watchButton: Button<TupleView<(Image, Text)>> {
         watch.isPaused ?
@@ -30,14 +31,14 @@ struct MainView: View {
                     Text("Pause")
                 })
     }
-    var resetButton: Button<TupleView<(Image, Text)>> {
+     var resetButton: Button<TupleView<(Image, Text)>> {
         Button(action: watch.reset, label: {
             Image(systemName: "gobackward")
             Text("Reset")
         })
     }
-    var relaxingButton: Button<TupleView<(Image, Text)>> {
-        Button(action: beginRelaxing) {
+     var relaxingButton: Button<TupleView<(Image, Text)>> {
+        Button(action: endStudy) {
             Image(systemName: "cup.and.saucer.fill")
             Text("Riposati per \(watch.relaxDuration.minuteSecond)")
         }
@@ -46,7 +47,9 @@ struct MainView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text("Tempo di studio totale\n\(total.hourMinuteSecond)")
+                Text("Totale: \(total.hourMinuteSecond)")
+                        .font(.title2)
+                Text("Record: \(record.hourMinuteSecond)")
                         .font(.title2)
 //                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
                 Text("\(watch.duration.minuteSecond)")
@@ -71,10 +74,14 @@ struct MainView: View {
         min(size.width / 4.5, size.height / 3)
     }
 
-    func beginRelaxing() {
+    func endStudy() {
+        if watch.relaxDuration == 0 {
+            return
+        }
         relaxingTime = watch.relaxDuration
-        if (relaxingTime != 0) {
-            total = total.advanced(by: watch.duration)
+        total = total.advanced(by: watch.duration)
+        if (record.allSeconds < watch.duration.allSeconds) {
+            record = watch.duration
         }
     }
 
