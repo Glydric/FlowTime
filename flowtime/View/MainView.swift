@@ -18,6 +18,14 @@ struct MainView: View {
     @Binding var relaxingTime: TimeInterval;
     @Binding var total: TimeInterval;
     @Binding var record: TimeInterval;
+    var updatedTotal: TimeInterval {
+        total.advanced(by: watch.duration)
+    }
+    var updatedRecord: TimeInterval {
+        record.allSeconds < watch.duration.allSeconds
+                ? watch.duration
+                : record
+    }
 
     var watchButton: Button<TupleView<(Image, Text)>> {
         watch.isPaused ?
@@ -31,14 +39,14 @@ struct MainView: View {
                     Text("Pause")
                 })
     }
-     var resetButton: Button<TupleView<(Image, Text)>> {
+    var resetButton: Button<TupleView<(Image, Text)>> {
         Button(action: watch.reset, label: {
             Image(systemName: "gobackward")
             Text("Reset")
         })
     }
-     var relaxingButton: Button<TupleView<(Image, Text)>> {
-        Button(action: endStudy) {
+    var relaxingButton: Button<TupleView<(Image, Text)>> {
+        Button(action: endSession) {
             Image(systemName: "cup.and.saucer.fill")
             Text("Riposati per \(watch.relaxDuration.minuteSecond)")
         }
@@ -47,10 +55,8 @@ struct MainView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text("Totale: \(total.hourMinuteSecond)")
-                        .font(.title2)
-                Text("Record: \(record.hourMinuteSecond)")
-                        .font(.title2)
+                Text("Totale - \(total.minuteSecond)").font(.title2)
+                Text("Record - \(updatedRecord.minuteSecond)").font(.title2)
 //                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
                 Text("\(watch.duration.minuteSecond)")
                         .font(Font.custom(
@@ -74,15 +80,13 @@ struct MainView: View {
         min(size.width / 4.5, size.height / 3)
     }
 
-    func endStudy() {
+    func endSession() {
         if watch.relaxDuration == 0 {
             return
         }
         relaxingTime = watch.relaxDuration
-        total = total.advanced(by: watch.duration)
-        if (record.allSeconds < watch.duration.allSeconds) {
-            record = watch.duration
-        }
+        total = updatedTotal
+        record = updatedRecord
     }
 
 }
