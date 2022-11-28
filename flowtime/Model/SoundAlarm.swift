@@ -16,7 +16,7 @@ class SoundAlarm: Alarm {
 
     func play() {
         player.prepareToPlay()
-        print(player.play())
+        player.play()
     }
 
     override func update() {
