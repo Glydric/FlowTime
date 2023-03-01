@@ -16,15 +16,15 @@ enum MinWindowSize {
 struct MainView: View {
     @ObservedObject var watch: StopWatch = StopWatch();
     @Binding var relaxingTime: TimeInterval;
-    @Binding var total: TimeInterval;
-    @Binding var record: TimeInterval;
-    var updatedTotal: TimeInterval {
-        total.advanced(by: watch.duration)
+    @Binding var oldTotal: TimeInterval;
+    var total: TimeInterval {
+        oldTotal.advanced(by: watch.duration)
     }
-    var updatedRecord: TimeInterval {
-        record.allSeconds < watch.duration.allSeconds
+    @Binding var oldRecord: TimeInterval;
+    var record: TimeInterval {
+        oldRecord.allSeconds < watch.duration.allSeconds
                 ? watch.duration
-                : record
+                : oldRecord
     }
 
     var watchButton: Button<TupleView<(Image, Text)>> {
@@ -55,8 +55,8 @@ struct MainView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text("Totale - \(total.minuteSecond)").font(.title2)
-                Text("Record - \(updatedRecord.minuteSecond)").font(.title2)
+                Text("Totale ~ \(total.minuteSecond)").font(.title2)
+                Text("Record ~ \(record.minuteSecond)").font(.title2)
 //                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
                 Text("\(watch.duration.minuteSecond)")
                         .font(Font.custom(
@@ -85,8 +85,8 @@ struct MainView: View {
             return
         }
         relaxingTime = watch.relaxDuration
-        total = updatedTotal
-        record = updatedRecord
+        oldTotal = total
+        oldRecord = record
     }
 
 }

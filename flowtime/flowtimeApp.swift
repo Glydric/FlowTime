@@ -26,8 +26,8 @@ struct flowtimeApp: App {
         return AnyView(
                 MainView(
                         relaxingTime: $relaxingTime,
-                        total: $total,
-                        record: $record
+                        oldTotal: $total,
+                        oldRecord: $record
                 )
         )
     }
