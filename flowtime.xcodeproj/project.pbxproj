@@ -33,7 +33,7 @@
 		857050D42935569D007013D0 /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		857050D62935569D007013D0 /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
 		858394862915AF7200A30017 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
-		858394882915B07600A30017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = FlowTime/Info.plist; sourceTree = "<group>"; };
+		858394882915B07600A30017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; name = Info.plist; path = flowtime/Info.plist; sourceTree = "<group>"; };
 		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,13 +48,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		857050D12935569D007013D0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E235ABF9AAF2C19826924D2A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,14 +58,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		857050D52935569D007013D0 /* FlowTimeTests */ = {
-			isa = PBXGroup;
-			children = (
-				857050D62935569D007013D0 /* flowtimeTests.swift */,
-			);
-			path = FlowTimeTests;
-			sourceTree = "<group>";
-		};
 		E235A81AEA604FC11221F86E /* flowtime */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,14 +69,6 @@
 				E235ABFA607DEF06C5FF2C57 /* Resources */,
 			);
 			path = flowtime;
-			sourceTree = "<group>";
-		};
-		E235AA996FF2F06BE6E0A84F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				857050D42935569D007013D0 /* FlowTimeTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E235AABD6770013BB3CAF3C7 /* View */ = {
@@ -116,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				858394882915B07600A30017 /* Info.plist */,
-				857050D52935569D007013D0 /* FlowTimeTests */,
-				E235AA996FF2F06BE6E0A84F /* Products */,
 				E235A81AEA604FC11221F86E /* flowtime */,
 				E235A2E9DA4B1155047D1E46 /* LICENSE */,
 			);
@@ -137,24 +112,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		857050D32935569D007013D0 /* FlowTimeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 857050DC2935569D007013D0 /* Build configuration list for PBXNativeTarget "FlowTimeTests" */;
-			buildPhases = (
-				857050D02935569D007013D0 /* Sources */,
-				857050D12935569D007013D0 /* Frameworks */,
-				857050D22935569D007013D0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				857050D92935569D007013D0 /* PBXTargetDependency */,
-			);
-			name = FlowTimeTests;
-			productName = FlowTimeTests;
-			productReference = 857050D42935569D007013D0 /* FlowTimeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		E235A3E3577E3C0327A1E9FD /* FlowTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E235A76115B1518E85466D43 /* Build configuration list for PBXNativeTarget "FlowTime" */;
@@ -180,12 +137,6 @@
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					857050D32935569D007013D0 = {
-						CreatedOnToolsVersion = 14.1;
-						DevelopmentTeam = KC68A42FB9;
-						ProvisioningStyle = Automatic;
-						TestTargetID = E235A3E3577E3C0327A1E9FD;
-					};
 					E235A3E3577E3C0327A1E9FD = {
 						DevelopmentTeam = KC68A42FB9;
 						ProvisioningStyle = Automatic;
@@ -202,24 +153,16 @@
 				it,
 			);
 			mainGroup = E235AE077519EBC6FD6002C1;
-			productRefGroup = E235AA996FF2F06BE6E0A84F /* Products */;
+			productRefGroup = E235AE077519EBC6FD6002C1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E235A3E3577E3C0327A1E9FD /* FlowTime */,
-				857050D32935569D007013D0 /* FlowTimeTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		857050D22935569D007013D0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E235AD71F911868BE568ADB4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,14 +176,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		857050D02935569D007013D0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				857050D72935569D007013D0 /* flowtimeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E235A7CA46E0A64F7254C4F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,53 +192,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		857050D92935569D007013D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E235A3E3577E3C0327A1E9FD /* FlowTime */;
-			targetProxy = 857050D82935569D007013D0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		857050DA2935569D007013D0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KC68A42FB9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.FlowTimeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlowTime";
-			};
-			name = Debug;
-		};
-		857050DB2935569D007013D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KC68A42FB9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.FlowTimeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlowTime";
-			};
-			name = Release;
-		};
 		E235A145DFE7E56EA58D7E05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -314,21 +203,26 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = flowtime/flowtime.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "flowtime/Resources/ConcertOne-Regular.ttf";
 				DEVELOPMENT_TEAM = KC68A42FB9;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = NO;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FlowTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
@@ -337,7 +231,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
@@ -345,9 +239,11 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -361,21 +257,26 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = flowtime/flowtime.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "flowtime/Resources/ConcertOne-Regular.ttf";
 				DEVELOPMENT_TEAM = KC68A42FB9;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = NO;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FlowTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
@@ -384,7 +285,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
@@ -392,9 +293,11 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,6 +339,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -444,10 +348,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_OUTPUT_FORMAT = binary;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -503,10 +414,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_OUTPUT_FORMAT = binary;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PLIST_FILE_OUTPUT_FORMAT = binary;
+				SDKROOT = macosx;
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -515,15 +431,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		857050DC2935569D007013D0 /* Build configuration list for PBXNativeTarget "FlowTimeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				857050DA2935569D007013D0 /* Debug */,
-				857050DB2935569D007013D0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		E235A76115B1518E85466D43 /* Build configuration list for PBXNativeTarget "FlowTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
