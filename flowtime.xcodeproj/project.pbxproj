@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850B824029AFA92C0011F997 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 850B823F29AFA92C0011F997 /* Assets.xcassets */; };
 		858394872915AF7200A30017 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 858394862915AF7200A30017 /* ConcertOne-Regular.ttf */; };
 		E235A1B8476A59A9D13C4A15 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A1B123E4A7FFD9C825FD /* Alarm.swift */; };
 		E235A7D9E8896C8B61C871C8 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A8B08506E858C688372C /* StopWatch.swift */; };
@@ -16,27 +17,14 @@
 		E235ABF5CA38A7871D2C561A /* SoundAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A4661E20BE210162AAF8 /* SoundAlarm.swift */; };
 		E235AC0EE1166D77B991713F /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235ABF7212FE27A82F47A06 /* TimeIntervalExtension.swift */; };
 		E235AE0FFC0B99875A1F0B52 /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = E235AB61C4963668604D60B6 /* audio.wav */; };
-		E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E235A3A3C489DEE558496ED5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		857050D82935569D007013D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E235A2A15C5458D826188975 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E235A3E3577E3C0327A1E9FD;
-			remoteInfo = FlowTime;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		857050D42935569D007013D0 /* FlowTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		857050D62935569D007013D0 /* flowtimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flowtimeTests.swift; sourceTree = "<group>"; };
+		850B823F29AFA92C0011F997 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		858394862915AF7200A30017 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
 		858394882915B07600A30017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; name = Info.plist; path = flowtime/Info.plist; sourceTree = "<group>"; };
 		E235A1B123E4A7FFD9C825FD /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		E235A2E9DA4B1155047D1E46 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		E235A3A3C489DEE558496ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E235A4661E20BE210162AAF8 /* SoundAlarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundAlarm.swift; sourceTree = "<group>"; };
 		E235A47336AF32810D1A41AB /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		E235A8B08506E858C688372C /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
@@ -61,7 +49,6 @@
 		E235A81AEA604FC11221F86E /* flowtime */ = {
 			isa = PBXGroup;
 			children = (
-				E235A3A3C489DEE558496ED5 /* Assets.xcassets */,
 				E235AD7098CB9282A5F78251 /* flowtimeApp.swift */,
 				E235A8EF1EED8C459D7B7B81 /* flowtime.entitlements */,
 				E235AEB833C07D82F1F0E545 /* Model */,
@@ -92,6 +79,7 @@
 		E235AE077519EBC6FD6002C1 = {
 			isa = PBXGroup;
 			children = (
+				850B823F29AFA92C0011F997 /* Assets.xcassets */,
 				858394882915B07600A30017 /* Info.plist */,
 				E235A81AEA604FC11221F86E /* flowtime */,
 				E235A2E9DA4B1155047D1E46 /* LICENSE */,
@@ -167,8 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E235AFEB215C81B769BA68ED /* Assets.xcassets in Resources */,
 				858394872915AF7200A30017 /* ConcertOne-Regular.ttf in Resources */,
+				850B824029AFA92C0011F997 /* Assets.xcassets in Resources */,
 				E235AE0FFC0B99875A1F0B52 /* audio.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +221,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -287,7 +275,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
