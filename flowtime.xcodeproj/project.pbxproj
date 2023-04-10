@@ -50,7 +50,6 @@
 			children = (
 				85149C2429E421FF00A5D795 /* Model */,
 				85149C2929E421FF00A5D795 /* View */,
-				8563D6C529E428BB00F7F714 /* Resources */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -114,6 +113,7 @@
 				85A875CA29E41FD000274EA6 /* Assets.xcassets */,
 				85A875CF29E41FD000274EA6 /* FlowTime.entitlements */,
 				85149C1C29E421FF00A5D795 /* Main */,
+				8563D6C529E428BB00F7F714 /* Resources */,
 				85A875CC29E41FD000274EA6 /* Preview Content */,
 			);
 			path = FlowTime;
