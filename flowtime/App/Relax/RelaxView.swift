@@ -5,13 +5,8 @@
 import SwiftUI
 
 struct RelaxView: View {
+	@StateObject private var viewModel: Model = Model()
 	@Binding var relaxingTime: TimeInterval
-	@ObservedObject private var alarm: SoundAlarm;
-	
-	init(time: Binding<TimeInterval>) {
-		self._relaxingTime = time
-		alarm = SoundAlarm(time.wrappedValue)
-	}
 	
 	func calcFontTitle(size: CGSize) -> CGFloat {
 		min(size.width / 4, size.height / 3)
@@ -20,9 +15,9 @@ struct RelaxView: View {
 	var body: some View {
 		GeometryReader { geometry in
 			VStack {
-				Text(alarm.duration.minuteSecond)
+				Text(viewModel.duration.minuteSecond)
 					.font(.system(size: calcFontTitle(size: geometry.size)))
-				if (alarm.rawSeconds == 0) {
+				if (viewModel.rawSeconds == 0) {
 					Button(action: { relaxingTime = 0 }) {
 						Text("Nuova Sessione")
 					}
@@ -32,6 +27,9 @@ struct RelaxView: View {
 			.frame(maxWidth: .infinity, maxHeight: .infinity)
 		}
 		.frame(minWidth: MinWindowSize.width, minHeight: MinWindowSize.height)
+		.onAppear(){
+			viewModel.rawSeconds = relaxingTime.allSeconds
+		}
 	}
 	
 }

@@ -10,19 +10,13 @@ import SwiftUI
 @main
 struct FlowTimeApp: App {
 	@State var relaxingTime: TimeInterval = 0
-	@State var total: TimeInterval = 0
-	@State var record: TimeInterval = 0
 	
 	var body: some Scene {
 		WindowGroup {
 			if relaxingTime == 0 {
-				MainView(
-					relaxingTime: $relaxingTime,
-					oldTotal: $total,
-					oldRecord: $record
-				)
+				ClockView(relaxingTime: $relaxingTime)
 			} else {
-				RelaxView(time: $relaxingTime)
+				RelaxView(relaxingTime: $relaxingTime)
 			}
 		}
 	}
