@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85149C2E29E421FF00A5D795 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85149C2029E421FF00A5D795 /* ConcertOne-Regular.ttf */; };
-		85149C2F29E421FF00A5D795 /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 85149C2129E421FF00A5D795 /* audio.wav */; };
 		85149C3129E421FF00A5D795 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2629E421FF00A5D795 /* TimeIntervalExtension.swift */; };
 		85149C3229E421FF00A5D795 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2729E421FF00A5D795 /* StopWatch.swift */; };
 		85149C3329E421FF00A5D795 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2829E421FF00A5D795 /* Alarm.swift */; };
 		85149C3429E421FF00A5D795 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2A29E421FF00A5D795 /* RelaxView.swift */; };
 		85149C3529E421FF00A5D795 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2B29E421FF00A5D795 /* MainView.swift */; };
+		8563D6C829E428BB00F7F714 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */; };
+		8563D6C929E428BB00F7F714 /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C729E428BB00F7F714 /* audio.wav */; };
 		85A875C729E41FCF00274EA6 /* FlowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A875C629E41FCF00274EA6 /* FlowTime.swift */; };
 		85A875CB29E41FD000274EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A875CA29E41FD000274EA6 /* Assets.xcassets */; };
 		85A875CE29E41FD000274EA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A875CD29E41FD000274EA6 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		85149C2029E421FF00A5D795 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
-		85149C2129E421FF00A5D795 /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
 		85149C2629E421FF00A5D795 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		85149C2729E421FF00A5D795 /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		85149C2829E421FF00A5D795 /* Alarm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		85149C2A29E421FF00A5D795 /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		85149C2B29E421FF00A5D795 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
+		8563D6C729E428BB00F7F714 /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
 		85A875C329E41FCF00274EA6 /* FlowTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85A875C629E41FCF00274EA6 /* FlowTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTime.swift; sourceTree = "<group>"; };
 		85A875CA29E41FD000274EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,19 +48,11 @@
 		85149C1C29E421FF00A5D795 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				85149C2929E421FF00A5D795 /* View */,
 				85149C2429E421FF00A5D795 /* Model */,
+				85149C2929E421FF00A5D795 /* View */,
+				8563D6C529E428BB00F7F714 /* Resources */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		85149C1F29E421FF00A5D795 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				85149C2029E421FF00A5D795 /* ConcertOne-Regular.ttf */,
-				85149C2129E421FF00A5D795 /* audio.wav */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		85149C2429E421FF00A5D795 /* Model */ = {
@@ -90,6 +82,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8563D6C529E428BB00F7F714 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */,
+				8563D6C729E428BB00F7F714 /* audio.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		85A875BA29E41FCF00274EA6 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +114,6 @@
 				85A875CA29E41FD000274EA6 /* Assets.xcassets */,
 				85A875CF29E41FD000274EA6 /* FlowTime.entitlements */,
 				85149C1C29E421FF00A5D795 /* Main */,
-				85149C1F29E421FF00A5D795 /* Resources */,
 				85A875CC29E41FD000274EA6 /* Preview Content */,
 			);
 			path = FlowTime;
@@ -186,9 +186,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				85A875CE29E41FD000274EA6 /* Preview Assets.xcassets in Resources */,
-				85149C2E29E421FF00A5D795 /* ConcertOne-Regular.ttf in Resources */,
+				8563D6C929E428BB00F7F714 /* audio.wav in Resources */,
+				8563D6C829E428BB00F7F714 /* ConcertOne-Regular.ttf in Resources */,
 				85A875CB29E41FD000274EA6 /* Assets.xcassets in Resources */,
-				85149C2F29E421FF00A5D795 /* audio.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
