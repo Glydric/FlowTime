@@ -8,15 +8,10 @@
 
 import SwiftUI
 
-enum MinWindowSize {
-	static let width: CGFloat = 350;
-	static let height: CGFloat = 250;
-}
-
 struct MainView: View {
-	@ObservedObject var watch: StopWatch = StopWatch();
-	@Binding var relaxingTime: TimeInterval;
-	@Binding var oldTotal: TimeInterval;
+	@ObservedObject var watch: StopWatch = StopWatch()
+	@Binding var relaxingTime: TimeInterval
+	@Binding var oldTotal: TimeInterval
 	var total: TimeInterval {
 		oldTotal.advanced(by: watch.duration)
 	}
@@ -73,12 +68,15 @@ struct MainView: View {
 	}
 	
 	func endSession() {
-		if watch.relaxDuration == 0 {
-			return
-		}
+		if watch.relaxDuration == 0 { return }
 		relaxingTime = watch.relaxDuration
 		oldTotal = total
 		oldRecord = record
 	}
 	
+}
+
+enum MinWindowSize {
+	static let width: CGFloat = 350;
+	static let height: CGFloat = 250;
 }
