@@ -48,8 +48,8 @@
 		85149C1C29E421FF00A5D795 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				85149C2429E421FF00A5D795 /* Model */,
 				85149C2929E421FF00A5D795 /* View */,
+				85149C2429E421FF00A5D795 /* Model */,
 			);
 			path = Main;
 			sourceTree = "<group>";

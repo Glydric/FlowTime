@@ -6,7 +6,7 @@ import SwiftUI
 
 struct RelaxView: View {
 	@Binding var relaxingTime: TimeInterval
-	@ObservedObject private var alarm: Alarm;
+	@ObservedObject private var alarm: SoundAlarm;
 	
 	init(time: Binding<TimeInterval>) {
 		self._relaxingTime = time

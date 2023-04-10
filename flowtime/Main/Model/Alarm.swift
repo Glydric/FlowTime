@@ -5,28 +5,18 @@
 import Foundation
 import AVFoundation
 
-class Alarm: StopWatch {
+class SoundAlarm: StopWatch {
+	private let soundFileURL = Bundle.main.url(forResource: "audio", withExtension: "wav")!
+	private let player: AVAudioPlayer
+	
 	convenience init(_ duration: TimeInterval) {
 		self.init(duration.allSeconds)
 	}
 	
 	override init(_ duration: Int) {
-		super.init(duration)
-		start()
-	}
-	
-	override func update() {
-		decrement()
-	}
-}
-
-class SoundAlarm: Alarm {
-	private let soundFileURL = Bundle.main.url(forResource: "audio", withExtension: "wav")!
-	private let player: AVAudioPlayer
-	
-	override init(_ duration: Int) {
 		player = try! AVAudioPlayer(contentsOf: soundFileURL)
 		super.init(duration)
+		start()
 	}
 	
 	func play() {
@@ -35,7 +25,7 @@ class SoundAlarm: Alarm {
 	}
 	
 	override func update() {
-		super.update()
+		decrement()
 		if (super.rawSeconds == 0) {
 			play()
 		}

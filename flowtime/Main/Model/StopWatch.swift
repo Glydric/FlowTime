@@ -54,7 +54,7 @@ class StopWatch: ObservableObject {
         stop()
     }
 
-	// riavvia il timer
+	/// riavvia il timer
     public func start() {
         stop()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)

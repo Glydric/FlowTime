@@ -45,11 +45,11 @@ struct MainView: View {
 			VStack {
 				Text("Totale ~ \(total.minuteSecond)").font(.title2)
 				Text("Record ~ \(record.minuteSecond)").font(.title2)
-				//                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
-				Text("\(watch.duration.minuteSecond)")
+//				                Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
+				Text(watch.duration.minuteSecond)
 					.font(Font.custom(
 						"Monaco",
-						//                                TODO add ConcertOne-Regular.ttf
+//						                                TODO add ConcertOne-Regular.ttf
 						size: calcFontTitle(size: geometry.size)
 					)).padding(8)
 				
