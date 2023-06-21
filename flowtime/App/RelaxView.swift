@@ -5,8 +5,7 @@
 import SwiftUI
 
 struct RelaxView: View {
-	@StateObject private var viewModel: Model = Model()
-	@Binding var relaxingTime: TimeInterval
+	@StateObject private var viewModel: RelaxModel = RelaxModel()
 	
 	func calcFontTitle(size: CGSize) -> CGFloat {
 		min(size.width / 4, size.height / 3)
@@ -18,7 +17,7 @@ struct RelaxView: View {
 				Text(viewModel.duration.minuteSecond)
 					.font(.system(size: calcFontTitle(size: geometry.size)))
 				if (viewModel.rawSeconds == 0) {
-					Button(action: { relaxingTime = 0 }) {
+					Button(action: { ClockModel.shared.relaxingTime = 0 }) {
 						Text("Nuova Sessione")
 					}
 				}
@@ -28,7 +27,7 @@ struct RelaxView: View {
 		}
 		.frame(minWidth: MinWindowSize.width, minHeight: MinWindowSize.height)
 		.onAppear(){
-			viewModel.rawSeconds = relaxingTime.allSeconds
+			viewModel.rawSeconds = ClockModel.shared.relaxingTime.allSeconds
 		}
 	}
 	

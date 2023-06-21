@@ -12,13 +12,16 @@
 		85149C3529E421FF00A5D795 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2B29E421FF00A5D795 /* ClockView.swift */; };
 		8563D6C829E428BB00F7F714 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */; };
 		8563D6C929E428BB00F7F714 /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C729E428BB00F7F714 /* audio.wav */; };
-		8587684529E42FDF00D6E5AE /* ClockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684429E42FDF00D6E5AE /* ClockViewModel.swift */; };
-		8587684929E4306300D6E5AE /* RelaxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684829E4306300D6E5AE /* RelaxViewModel.swift */; };
+		8587684529E42FDF00D6E5AE /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684429E42FDF00D6E5AE /* ClockModel.swift */; };
+		8587684929E4306300D6E5AE /* RelaxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684829E4306300D6E5AE /* RelaxModel.swift */; };
 		8587684C29E4544700D6E5AE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684B29E4544700D6E5AE /* StorageManager.swift */; };
 		8587684E29E454CB00D6E5AE /* ProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684D29E454CB00D6E5AE /* ProgressModel.swift */; };
 		85A875C729E41FCF00274EA6 /* FlowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A875C629E41FCF00274EA6 /* FlowTime.swift */; };
 		85A875CB29E41FD000274EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A875CA29E41FD000274EA6 /* Assets.xcassets */; };
 		85A875CE29E41FD000274EA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85A875CD29E41FD000274EA6 /* Preview Assets.xcassets */; };
+		85ACBCE82A43049700EA2A42 /* NSMenuExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */; };
+		85ACBCEC2A431CA900EA2A42 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ACBCEB2A431CA900EA2A42 /* Encodable.swift */; };
+		85ACBCEF2A43232700EA2A42 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ACBCEE2A43232700EA2A42 /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +30,8 @@
 		85149C2B29E421FF00A5D795 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
 		8563D6C729E428BB00F7F714 /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
-		8587684429E42FDF00D6E5AE /* ClockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockViewModel.swift; sourceTree = "<group>"; };
-		8587684829E4306300D6E5AE /* RelaxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxViewModel.swift; sourceTree = "<group>"; };
+		8587684429E42FDF00D6E5AE /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
+		8587684829E4306300D6E5AE /* RelaxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxModel.swift; sourceTree = "<group>"; };
 		8587684B29E4544700D6E5AE /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8587684D29E454CB00D6E5AE /* ProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressModel.swift; sourceTree = "<group>"; };
 		85A875C329E41FCF00274EA6 /* FlowTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +39,10 @@
 		85A875CA29E41FD000274EA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85A875CD29E41FD000274EA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85A875CF29E41FD000274EA6 /* FlowTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlowTime.entitlements; sourceTree = "<group>"; };
+		85ACBCE62A43019400EA2A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenuExtension.swift; sourceTree = "<group>"; };
+		85ACBCEB2A431CA900EA2A42 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		85ACBCEE2A43232700EA2A42 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +59,8 @@
 		85149C1C29E421FF00A5D795 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				85A875C629E41FCF00274EA6 /* FlowTime.swift */,
-				8587684A29E4307700D6E5AE /* Clock */,
-				8587684729E4305500D6E5AE /* Relax */,
+				85149C2B29E421FF00A5D795 /* ClockView.swift */,
+				85149C2A29E421FF00A5D795 /* RelaxView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -62,6 +68,8 @@
 		85149C2429E421FF00A5D795 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8587684429E42FDF00D6E5AE /* ClockModel.swift */,
+				8587684829E4306300D6E5AE /* RelaxModel.swift */,
 				8587684D29E454CB00D6E5AE /* ProgressModel.swift */,
 			);
 			path = Model;
@@ -71,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				85149C2629E421FF00A5D795 /* TimeIntervalExtension.swift */,
+				85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */,
+				85ACBCEB2A431CA900EA2A42 /* Encodable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -82,24 +92,6 @@
 				8563D6C729E428BB00F7F714 /* audio.wav */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		8587684729E4305500D6E5AE /* Relax */ = {
-			isa = PBXGroup;
-			children = (
-				85149C2A29E421FF00A5D795 /* RelaxView.swift */,
-				8587684829E4306300D6E5AE /* RelaxViewModel.swift */,
-			);
-			path = Relax;
-			sourceTree = "<group>";
-		};
-		8587684A29E4307700D6E5AE /* Clock */ = {
-			isa = PBXGroup;
-			children = (
-				85149C2B29E421FF00A5D795 /* ClockView.swift */,
-				8587684429E42FDF00D6E5AE /* ClockViewModel.swift */,
-			);
-			path = Clock;
 			sourceTree = "<group>";
 		};
 		8587684F29E45BAC00D6E5AE /* CustomClass */ = {
@@ -130,6 +122,9 @@
 		85A875C529E41FCF00274EA6 /* FlowTime */ = {
 			isa = PBXGroup;
 			children = (
+				85A875C629E41FCF00274EA6 /* FlowTime.swift */,
+				85ACBCED2A43231B00EA2A42 /* MenuBarApp */,
+				85ACBCE62A43019400EA2A42 /* Info.plist */,
 				85A875CA29E41FD000274EA6 /* Assets.xcassets */,
 				85A875CF29E41FD000274EA6 /* FlowTime.entitlements */,
 				85149C1C29E421FF00A5D795 /* App */,
@@ -147,6 +142,14 @@
 				85A875CD29E41FD000274EA6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85ACBCED2A43231B00EA2A42 /* MenuBarApp */ = {
+			isa = PBXGroup;
+			children = (
+				85ACBCEE2A43232700EA2A42 /* MenuBar.swift */,
+			);
+			path = MenuBarApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,14 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8587684529E42FDF00D6E5AE /* ClockViewModel.swift in Sources */,
+				8587684529E42FDF00D6E5AE /* ClockModel.swift in Sources */,
 				85149C3529E421FF00A5D795 /* ClockView.swift in Sources */,
 				85A875C729E41FCF00274EA6 /* FlowTime.swift in Sources */,
 				8587684C29E4544700D6E5AE /* StorageManager.swift in Sources */,
 				85149C3129E421FF00A5D795 /* TimeIntervalExtension.swift in Sources */,
 				85149C3429E421FF00A5D795 /* RelaxView.swift in Sources */,
 				8587684E29E454CB00D6E5AE /* ProgressModel.swift in Sources */,
-				8587684929E4306300D6E5AE /* RelaxViewModel.swift in Sources */,
+				8587684929E4306300D6E5AE /* RelaxModel.swift in Sources */,
+				85ACBCE82A43049700EA2A42 /* NSMenuExtension.swift in Sources */,
+				85ACBCEF2A43232700EA2A42 /* MenuBar.swift in Sources */,
+				85ACBCEC2A431CA900EA2A42 /* Encodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,15 +371,17 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlowTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FlowTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -402,15 +410,17 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlowTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FlowTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 0.4;
+				MARKETING_VERSION = 0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
