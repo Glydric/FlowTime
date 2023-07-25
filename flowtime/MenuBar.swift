@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct MenuBar: Scene {
+	@Environment(\.openWindow) private var openWindow
 	@StateObject private var clockModel: ClockModel = ClockModel.shared
 	@StateObject private var relaxModel: RelaxModel = RelaxModel(ClockModel.shared.relaxingTime)
 	
-    var body: some Scene {
-		if #available(macOS 13.0, *) {
-			MenuBarExtra(content: {
+	var body: some Scene {
+		MenuBarExtra(
+			content: {
 				if clockModel.relaxingTime == 0 {
 					if clockModel.isPaused {
 						Button(action: clockModel.start) {
@@ -33,20 +34,21 @@ struct MenuBar: Scene {
 					}
 					
 					Divider()
-				} else {
-					
 				}
 				Text("Totale ~ \(clockModel.actualTotal.minuteSecond)")
 				Text("Record ~ \(clockModel.actualRecord.minuteSecond)")
 				
 				Divider()
 				
+				Button("Open View"){
+					NSApplication.shared.activate(ignoringOtherApps: true)
+					openWindow(id: "MainScreen")
+				}.keyboardShortcut("n")
+				
 				Button("Quit"){
 					NSApplication.shared.terminate(nil)
 				}.keyboardShortcut("q")
-					.onAppear{
-						clockModel.relaxingTime = 0
-					}
+					.onAppear { clockModel.relaxingTime = 0 }
 			}, label: {
 				if clockModel.relaxingTime == 0 {
 					Image(systemName: "timer")
@@ -56,11 +58,9 @@ struct MenuBar: Scene {
 				} else {
 					Image(systemName: "cup.and.saucer.fill")
 					Text(relaxModel.duration.minuteSecond)
-						.onAppear {
-							relaxModel.start()
-						}
+						.onAppear(perform: relaxModel.start)
 				}
-			})
-		}
+			}
+		)
 	}
 }

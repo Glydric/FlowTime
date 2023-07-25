@@ -22,6 +22,7 @@
 		85ACBCE82A43049700EA2A42 /* NSMenuExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */; };
 		85ACBCEC2A431CA900EA2A42 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ACBCEB2A431CA900EA2A42 /* Encodable.swift */; };
 		85ACBCEF2A43232700EA2A42 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ACBCEE2A43232700EA2A42 /* MenuBar.swift */; };
+		85E2B12D2A6FF41300E3EEF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E2B12C2A6FF41300E3EEF4 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMenuExtension.swift; sourceTree = "<group>"; };
 		85ACBCEB2A431CA900EA2A42 /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		85ACBCEE2A43232700EA2A42 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		85E2B12C2A6FF41300E3EEF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +58,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		85149C1C29E421FF00A5D795 /* App */ = {
+		85149C1C29E421FF00A5D795 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				85149C2B29E421FF00A5D795 /* ClockView.swift */,
 				85149C2A29E421FF00A5D795 /* RelaxView.swift */,
 			);
-			path = App;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		85149C2429E421FF00A5D795 /* Model */ = {
@@ -122,12 +124,13 @@
 		85A875C529E41FCF00274EA6 /* FlowTime */ = {
 			isa = PBXGroup;
 			children = (
+				85E2B12C2A6FF41300E3EEF4 /* AppDelegate.swift */,
 				85A875C629E41FCF00274EA6 /* FlowTime.swift */,
-				85ACBCED2A43231B00EA2A42 /* MenuBarApp */,
+				85ACBCEE2A43232700EA2A42 /* MenuBar.swift */,
 				85ACBCE62A43019400EA2A42 /* Info.plist */,
 				85A875CA29E41FD000274EA6 /* Assets.xcassets */,
 				85A875CF29E41FD000274EA6 /* FlowTime.entitlements */,
-				85149C1C29E421FF00A5D795 /* App */,
+				85149C1C29E421FF00A5D795 /* Views */,
 				85149C2429E421FF00A5D795 /* Model */,
 				8587684F29E45BAC00D6E5AE /* CustomClass */,
 				8563D6C529E428BB00F7F714 /* Resources */,
@@ -142,14 +145,6 @@
 				85A875CD29E41FD000274EA6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		85ACBCED2A43231B00EA2A42 /* MenuBarApp */ = {
-			isa = PBXGroup;
-			children = (
-				85ACBCEE2A43232700EA2A42 /* MenuBar.swift */,
-			);
-			path = MenuBarApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +222,7 @@
 				8587684529E42FDF00D6E5AE /* ClockModel.swift in Sources */,
 				85149C3529E421FF00A5D795 /* ClockView.swift in Sources */,
 				85A875C729E41FCF00274EA6 /* FlowTime.swift in Sources */,
+				85E2B12D2A6FF41300E3EEF4 /* AppDelegate.swift in Sources */,
 				8587684C29E4544700D6E5AE /* StorageManager.swift in Sources */,
 				85149C3129E421FF00A5D795 /* TimeIntervalExtension.swift in Sources */,
 				85149C3429E421FF00A5D795 /* RelaxView.swift in Sources */,
@@ -292,7 +288,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -347,7 +343,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -374,14 +370,13 @@
 				INFOPLIST_FILE = FlowTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FlowTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 0.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -413,14 +408,13 @@
 				INFOPLIST_FILE = FlowTime/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = FlowTime;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
-				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 0.5;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 0.7;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

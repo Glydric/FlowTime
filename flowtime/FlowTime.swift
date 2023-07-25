@@ -9,16 +9,18 @@ import SwiftUI
 
 @main
 struct FlowTimeApp: App {
+	@NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 	@StateObject private var viewModel: ClockModel = ClockModel.shared
+	
 	var body: some Scene {
 		MenuBar()
 		
-//		WindowGroup {
-//			if viewModel.relaxingTime == 0 {
-//				ClockView()
-//			} else {
-//				RelaxView()
-//			}
-//		}
+		Window("MainScreen", id: "MainScreen") {
+			if viewModel.relaxingTime == 0 {
+				ClockView()
+			} else {
+				RelaxView()
+			}
+		}
 	}
 }
