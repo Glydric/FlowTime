@@ -21,13 +21,11 @@ class ClockModel: ObservableObject {
 	var relaxDuration: TimeInterval { TimeInterval(rawSeconds / 5) }
 	
 	var actualTotal: TimeInterval {
-		StorageManager.progress.total.advanced(by: duration)
+		StorageManager.actualProfile.total.advanced(by: duration)
 	}
 	
 	var actualRecord: TimeInterval {
-		StorageManager.progress.record.allSeconds < duration.allSeconds
-			? duration
-			: StorageManager.progress.record
+		max(duration, StorageManager.actualProfile.record)
 	}
 	
 	private init(_ seconds: Int = 0) {
@@ -38,8 +36,8 @@ class ClockModel: ObservableObject {
 
 	func endSession() {
 		if relaxDuration != 0 {
-			StorageManager.progress.total = actualTotal
-			StorageManager.progress.record = actualRecord
+			StorageManager.actualProfile.total = actualTotal
+			StorageManager.actualProfile.record = actualRecord
 			relaxingTime = relaxDuration
 			reset()
 		}

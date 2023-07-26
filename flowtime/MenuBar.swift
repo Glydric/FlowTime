@@ -12,6 +12,16 @@ struct MenuBar: Scene {
 	@StateObject private var clockModel: ClockModel = ClockModel.shared
 	@StateObject private var relaxModel: RelaxModel = RelaxModel(ClockModel.shared.relaxingTime)
 	
+	@AppStorage("actual") var actualId = 0
+	@AppStorage("profilesString") var profiles = [Profile]()
+	
+	private var others: [Profile] {
+		StorageManager.profile.filter { $0 != StorageManager.actualProfile }
+	}
+	private var actual: Profile {
+		profiles[actualId]
+	}
+	
 	var body: some Scene {
 		MenuBarExtra(
 			content: {
@@ -29,14 +39,40 @@ struct MenuBar: Scene {
 					}
 					
 					Button(action: clockModel.reset) {
-						Image(systemName: "gobackward")
-						Text("Reset")
+						Image(systemName: "trash.fill")
+						Text("Cancel")
 					}
 					
 					Divider()
 				}
-				Text("Totale ~ \(clockModel.actualTotal.minuteSecond)")
+				
+				if profiles.count == 1 {
+					Button(actual.title) {}
+				} else {
+					Menu("Profile \(actual.title)") {
+						ForEach(others, id: \.self) { p in
+							Button(p.title) {
+								StorageManager.actualProfile = p
+							}
+						}
+					}
+				}
+				
+				Button(action: {
+					NSApplication.shared.activate(ignoringOtherApps: true)
+					openWindow(id: "EditProfile")
+				}, label: {
+					Image(systemName: "pencil")
+					Text("Edit Profiles")
+				})
+				
+				Text("Total ~ \(clockModel.actualTotal.minuteSecond)")
 				Text("Record ~ \(clockModel.actualRecord.minuteSecond)")
+				
+				Button(action: {StorageManager.actualProfile.reset()}) {
+					Image(systemName: "gobackward")
+					Text("Reset")
+				}
 				
 				Divider()
 				

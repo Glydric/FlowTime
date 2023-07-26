@@ -15,12 +15,16 @@ struct FlowTimeApp: App {
 	var body: some Scene {
 		MenuBar()
 		
-		Window("MainScreen", id: "MainScreen") {
+		WindowGroup(id: "MainScreen") {
 			if viewModel.relaxingTime == 0 {
 				ClockView()
 			} else {
 				RelaxView()
 			}
+		}
+		
+		Window("Edit Profile", id: "EditProfile") {
+			EditProfile()
 		}
 	}
 }
