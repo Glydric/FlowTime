@@ -8,11 +8,13 @@
 import AppKit
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+
 	func applicationWillFinishLaunching(_ notification: Notification) {
 		NSApp.setActivationPolicy(.accessory)
 		UserDefaults.standard.removeObject(forKey: "progressString")
 //		#if DEBUG
-//		UserDefaults.standard.set(0, forKey: "actual")
+//		UserDefaults.standard.removeObject(forKey: "profilesString")
+//		UserDefaults.standard.removeObject(forKey: "actual")
 //		#endif
 	}
 }

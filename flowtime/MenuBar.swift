@@ -19,7 +19,10 @@ struct MenuBar: Scene {
 		StorageManager.profile.filter { $0 != StorageManager.actualProfile }
 	}
 	private var actual: Profile {
-		profiles[actualId]
+		if profiles.count == 0 {
+			profiles.append(Profile(title: "Default"))
+		}
+		return profiles[actualId]
 	}
 	
 	var body: some Scene {

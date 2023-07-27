@@ -51,6 +51,16 @@ struct EditProfile: View {
 								Text("Edit Profile")
 							}
 						)
+						
+						if profiles.count > 1{
+							Button(
+								action: {profiles.removeFirst(p)},
+								label: {
+									Image(systemName: "trash")
+									Text("Delete Profile")
+								}
+							)
+						}
 					}
 				}
 			}

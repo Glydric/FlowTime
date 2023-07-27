@@ -21,8 +21,8 @@ struct ClockView: View {
 	var body: some View {
 		GeometryReader { geometry in
 			VStack {
-				Text("Totale ~ \(viewModel.actualTotal.minuteSecond)").font(.title2)
-				Text("Record ~ \(viewModel.actualRecord.minuteSecond)").font(.title2)
+//				Text("Totale ~ \(viewModel.actualTotal.minuteSecond)").font(.title2)
+//				Text("Record ~ \(viewModel.actualRecord.minuteSecond)").font(.title2)
 				// Text("\(Int(geometry.size.width))x\(Int(geometry.size.height)) \(Int(calcFontTitle(size: geometry.size)))")
 				Text(viewModel.duration.minuteSecond)
 					.font(Font.custom(
