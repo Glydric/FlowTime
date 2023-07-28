@@ -22,7 +22,13 @@ struct MenuBar: Scene {
 		if profiles.count == 0 {
 			profiles.append(Profile(title: "Default"))
 		}
+		
+		if profiles.count <= actualId {
+			actualId = 0
+		}
+		
 		return profiles[actualId]
+		
 	}
 	
 	var body: some Scene {
