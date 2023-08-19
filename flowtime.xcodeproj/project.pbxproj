@@ -10,6 +10,8 @@
 		85149C3129E421FF00A5D795 /* TimeIntervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2629E421FF00A5D795 /* TimeIntervalExtension.swift */; };
 		85149C3429E421FF00A5D795 /* RelaxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2A29E421FF00A5D795 /* RelaxView.swift */; };
 		85149C3529E421FF00A5D795 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85149C2B29E421FF00A5D795 /* ClockView.swift */; };
+		851F8EC22A8FCD6300945DE9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8EC12A8FCD6300945DE9 /* Color.swift */; };
+		851F8EC42A8FCE6100945DE9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8EC32A8FCE6100945DE9 /* Image.swift */; };
 		8563D6C829E428BB00F7F714 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */; };
 		8563D6C929E428BB00F7F714 /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C729E428BB00F7F714 /* audio.wav */; };
 		8587684529E42FDF00D6E5AE /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684429E42FDF00D6E5AE /* ClockModel.swift */; };
@@ -32,6 +34,8 @@
 		85149C2629E421FF00A5D795 /* TimeIntervalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeIntervalExtension.swift; sourceTree = "<group>"; };
 		85149C2A29E421FF00A5D795 /* RelaxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelaxView.swift; sourceTree = "<group>"; };
 		85149C2B29E421FF00A5D795 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
+		851F8EC12A8FCD6300945DE9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		851F8EC32A8FCE6100945DE9 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
 		8563D6C729E428BB00F7F714 /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
 		8587684429E42FDF00D6E5AE /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */,
 				85ACBCEB2A431CA900EA2A42 /* Encodable.swift */,
 				85E2B1362A71487700E3EEF4 /* Array.swift */,
+				851F8EC12A8FCD6300945DE9 /* Color.swift */,
+				851F8EC32A8FCE6100945DE9 /* Image.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,11 +239,13 @@
 				85A875C729E41FCF00274EA6 /* FlowTime.swift in Sources */,
 				85E2B12D2A6FF41300E3EEF4 /* AppDelegate.swift in Sources */,
 				8587684C29E4544700D6E5AE /* StorageManager.swift in Sources */,
+				851F8EC22A8FCD6300945DE9 /* Color.swift in Sources */,
 				85149C3129E421FF00A5D795 /* TimeIntervalExtension.swift in Sources */,
 				85E2B1372A71487700E3EEF4 /* Array.swift in Sources */,
 				85149C3429E421FF00A5D795 /* RelaxView.swift in Sources */,
 				8587684E29E454CB00D6E5AE /* ProfileModel.swift in Sources */,
 				8587684929E4306300D6E5AE /* RelaxModel.swift in Sources */,
+				851F8EC42A8FCE6100945DE9 /* Image.swift in Sources */,
 				85ACBCE82A43049700EA2A42 /* NSMenuExtension.swift in Sources */,
 				85E2B1352A71184700E3EEF4 /* CodableColor.swift in Sources */,
 				85ACBCEF2A43232700EA2A42 /* MenuBar.swift in Sources */,
