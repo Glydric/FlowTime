@@ -32,6 +32,10 @@ extension Array where Element: Hashable {
 		
 		return self
 	}
+	
+	func value(_ value: Element) -> Element? {
+		return first(where: {value == $0})
+	}
 }
 
 extension Array: RawRepresentable where Element: Codable {

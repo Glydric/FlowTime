@@ -18,6 +18,7 @@ struct MenuBar: Scene {
 	private var others: [Profile] {
 		StorageManager.profile.filter { $0 != StorageManager.actualProfile }
 	}
+	
 	private var actual: Profile {
 		if profiles.count == 0 {
 			profiles.append(Profile(title: "Default"))
@@ -28,7 +29,6 @@ struct MenuBar: Scene {
 		}
 		
 		return profiles[actualId]
-		
 	}
 	
 	var body: some Scene {
@@ -43,7 +43,7 @@ struct MenuBar: Scene {
 					} else {
 						Button(action: clockModel.endSession) {
 							Image(systemName: "cup.and.saucer.fill")
-							Text("Riposati per \(clockModel.relaxDuration.minuteSecond)")
+							Text("Relax for \(clockModel.relaxDuration.minuteSecond)")
 						}
 					}
 					
@@ -76,6 +76,7 @@ struct MenuBar: Scene {
 				})
 				
 				Text("Total ~ \(clockModel.actualTotal.minuteSecond)")
+					.foregroundColor(.black)
 				Text("Record ~ \(clockModel.actualRecord.minuteSecond)")
 				
 				Button(action: {StorageManager.actualProfile.reset()}) {
@@ -96,12 +97,12 @@ struct MenuBar: Scene {
 					.onAppear { clockModel.relaxingTime = 0 }
 			}, label: {
 				if clockModel.relaxingTime == 0 {
-					Image(systemName: "timer")
+					Image(systemName: "timer", withHierarchicalColor: actual.color.nsColor)
 					if !clockModel.isPaused{
 						Text(clockModel.duration.minuteSecond)
 					}
 				} else {
-					Image(systemName: "cup.and.saucer.fill")
+					Image(systemName: "cup.and.saucer.fill", withHierarchicalColor: actual.color.nsColor)
 					Text(relaxModel.duration.minuteSecond)
 						.onAppear(perform: relaxModel.start)
 				}
@@ -109,3 +110,4 @@ struct MenuBar: Scene {
 		)
 	}
 }
+

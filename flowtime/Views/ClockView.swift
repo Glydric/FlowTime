@@ -41,7 +41,7 @@ struct ClockView: View {
 						Button(action: viewModel.endSession, label: {
 							Image(systemName: "cup.and.saucer.fill")
 							
-							Text("Riposati per \(viewModel.relaxDuration.minuteSecond)")
+							Text("Relax for \(viewModel.relaxDuration.minuteSecond)")
 						})
 					}
 					resetButton
