@@ -18,6 +18,8 @@ struct EditProfile: View {
 	
 	@State var newProfile: Profile = Profile()
 	
+	@State var index: Int = 0
+	
 	var body: some View {
 		VStack{
 			Grid(alignment: .center, verticalSpacing: 32) {
@@ -28,7 +30,7 @@ struct EditProfile: View {
 					Text("Total")
 				}
 				
-				ForEach(0..<profiles.count){ index in
+				ForEach(0..<profiles.count, id: \.self){ index in
 					createProfileGridRow(index)
 					Divider()
 				}
@@ -61,9 +63,9 @@ struct EditProfile: View {
 		.scaledToFit()
 	}
 	
-	func createProfileGridRow(_ index: Int) -> some View {
-		var p: Profile { profiles[index] }
-		return GridRow{
+	@ViewBuilder func createProfileGridRow(_ index: Int) -> some View {
+		let p: Profile = profiles[index]
+		GridRow {
 			Circle()
 				.fill(p.color) // fill to actual color
 				.frame(width: 32, height: 32, alignment: .center)
@@ -71,18 +73,16 @@ struct EditProfile: View {
 				.background(AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .pink]), center: .center).cornerRadius(32))
 				.overlay(
 					ColorPicker("",
-						selection: $profiles[index].color,
-						supportsOpacity: false
-					)
+								selection: $profiles[index].color,
+								supportsOpacity: false
+							   )
 					.labelsHidden()
 					.opacity(0.08)
-					.blur(radius: 10)
-					.frame(width: 16, height: 16)
 				)
 				.shadow(radius: 0.5)
 			
 			TextField("Required",
-				text: $profiles[index].title
+					  text: $profiles[index].title
 			)
 			.textFieldStyle(RoundedBorderTextFieldStyle())
 			
@@ -90,16 +90,16 @@ struct EditProfile: View {
 			
 			Text(p.total.minuteSecond)
 			
-			if profiles.count > 1 {
+			if(profiles.count > 1){
 				Button(
-					action: {profiles.removeFirst(p)},
+					action: { profiles.removeFirst(p) },
 					label: {
 						Image(systemName: "trash")
 						Text("Delete")
 					}
 				)
 			}
-			
 		}
 	}
+	
 }

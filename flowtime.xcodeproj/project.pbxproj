@@ -14,6 +14,7 @@
 		851F8EC42A8FCE6100945DE9 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851F8EC32A8FCE6100945DE9 /* Image.swift */; };
 		8563D6C829E428BB00F7F714 /* ConcertOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */; };
 		8563D6C929E428BB00F7F714 /* audio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8563D6C729E428BB00F7F714 /* audio.wav */; };
+		856CF90C2A974C3E002704E3 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856CF90B2A974C3E002704E3 /* View.swift */; };
 		8587684529E42FDF00D6E5AE /* ClockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684429E42FDF00D6E5AE /* ClockModel.swift */; };
 		8587684929E4306300D6E5AE /* RelaxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684829E4306300D6E5AE /* RelaxModel.swift */; };
 		8587684C29E4544700D6E5AE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8587684B29E4544700D6E5AE /* StorageManager.swift */; };
@@ -38,6 +39,7 @@
 		851F8EC32A8FCE6100945DE9 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		8563D6C629E428BB00F7F714 /* ConcertOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ConcertOne-Regular.ttf"; sourceTree = "<group>"; };
 		8563D6C729E428BB00F7F714 /* audio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = audio.wav; sourceTree = "<group>"; };
+		856CF90B2A974C3E002704E3 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		8587684429E42FDF00D6E5AE /* ClockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockModel.swift; sourceTree = "<group>"; };
 		8587684829E4306300D6E5AE /* RelaxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelaxModel.swift; sourceTree = "<group>"; };
 		8587684B29E4544700D6E5AE /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				85149C2629E421FF00A5D795 /* TimeIntervalExtension.swift */,
+				856CF90B2A974C3E002704E3 /* View.swift */,
 				85ACBCE72A43049700EA2A42 /* NSMenuExtension.swift */,
 				85ACBCEB2A431CA900EA2A42 /* Encodable.swift */,
 				85E2B1362A71487700E3EEF4 /* Array.swift */,
@@ -248,6 +251,7 @@
 				851F8EC42A8FCE6100945DE9 /* Image.swift in Sources */,
 				85ACBCE82A43049700EA2A42 /* NSMenuExtension.swift in Sources */,
 				85E2B1352A71184700E3EEF4 /* CodableColor.swift in Sources */,
+				856CF90C2A974C3E002704E3 /* View.swift in Sources */,
 				85ACBCEF2A43232700EA2A42 /* MenuBar.swift in Sources */,
 				85ACBCEC2A431CA900EA2A42 /* Encodable.swift in Sources */,
 				85E2B1312A71122C00E3EEF4 /* EditProfiles.swift in Sources */,
@@ -396,7 +400,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 0.7.2;
+				MARKETING_VERSION = 0.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -434,7 +438,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 0.7.2;
+				MARKETING_VERSION = 0.8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.miglio.flowtime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
