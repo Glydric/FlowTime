@@ -85,7 +85,6 @@
 			children = (
 				8587684429E42FDF00D6E5AE /* ClockModel.swift */,
 				8587684829E4306300D6E5AE /* RelaxModel.swift */,
-				8587684D29E454CB00D6E5AE /* ProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +110,14 @@
 				8563D6C729E428BB00F7F714 /* audio.wav */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		858755A52A9A4EEC002C5AA8 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				8587684D29E454CB00D6E5AE /* ProfileModel.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		8587684F29E45BAC00D6E5AE /* CustomClass */ = {
@@ -150,6 +157,7 @@
 				85A875CF29E41FD000274EA6 /* FlowTime.entitlements */,
 				85149C1C29E421FF00A5D795 /* Views */,
 				85149C2429E421FF00A5D795 /* Model */,
+				858755A52A9A4EEC002C5AA8 /* DataModel */,
 				8587684F29E45BAC00D6E5AE /* CustomClass */,
 				8563D6C529E428BB00F7F714 /* Resources */,
 				85A875CC29E41FD000274EA6 /* Preview Content */,

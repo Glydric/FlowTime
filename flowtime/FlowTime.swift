@@ -26,5 +26,6 @@ struct FlowTimeApp: App {
 		Window("Edit Profile", id: "EditProfile") {
 			EditProfile()
 		}
+		
 	}
 }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import CoreData
 
 struct Profile: Codable, Hashable, Equatable {
 	var title: String = ""
