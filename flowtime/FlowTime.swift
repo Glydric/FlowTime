@@ -27,5 +27,14 @@ struct FlowTimeApp: App {
 			EditProfile()
 		}
 		
+		Window("Settings", id: "Settings") {
+			SettingsView()
+		}
+		.windowResizability(.contentSize)
+
+//		Settings{
+//			SettingsView()
+//		}
+		
 	}
 }
