@@ -12,6 +12,7 @@ struct MenuBar: Scene {
 	@StateObject private var clockModel: ClockModel = ClockModel.shared
 	@StateObject private var relaxModel: RelaxModel = RelaxModel(ClockModel.shared.relaxingTime)
 	
+	@AppStorage("settings.showTimer") private var showTimer = true
 	@AppStorage("actual") var actualId = 0
 	@AppStorage("profilesString") var profiles = [Profile]()
 	
@@ -84,12 +85,21 @@ struct MenuBar: Scene {
 					Text("Reset")
 				}
 				
-				Divider()
-				
 				Button("Open View"){
 					NSApplication.shared.activate(ignoringOtherApps: true)
 					openWindow(id: "MainScreen")
 				}.keyboardShortcut("n")
+				
+				Divider()
+				
+				
+				Button(action: {
+					NSApplication.shared.activate(ignoringOtherApps: true)
+					openWindow(id: "Settings")
+				}, label: {
+					Text("Preferences...")
+				})
+				.keyboardShortcut(",")
 				
 				Button("Quit"){
 					NSApplication.shared.terminate(nil)
@@ -98,9 +108,10 @@ struct MenuBar: Scene {
 			}, label: {
 				if clockModel.relaxingTime == 0 {
 					Image(systemName: "timer", withHierarchicalColor: actual.color.nsColor)
-					if !clockModel.isPaused{
-						Text(clockModel.duration.minuteSecond)
-					}
+					
+					Text(clockModel.duration.minuteSecond)
+						.hidden(!showTimer)
+						.hidden(clockModel.isPaused)
 				} else {
 					Image(systemName: "cup.and.saucer.fill", withHierarchicalColor: actual.color.nsColor)
 					Text(relaxModel.duration.minuteSecond)
