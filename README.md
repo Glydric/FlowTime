@@ -1,13 +1,5 @@
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-</style>
+<img src="AppIcon.png" height=50% width=50% alt="App Icon" style="display: block; margin-left: auto; margin-right: auto">
 
-![AppIcon](AppIcon.png)
 
 # FlowTime
 
