@@ -1,4 +1,6 @@
-<img src="AppIcon.png" height=50% width=50% alt="App Icon" style="display: block; margin-left: auto; margin-right: auto">
+<div align="center">
+  <img src="AppIcon.png" height=50% width=50% alt="App Icon">
+</div>
 
 
 # FlowTime
