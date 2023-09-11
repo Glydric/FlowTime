@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 class ClockModel: ObservableObject {
 	static let shared: ClockModel = ClockModel() // TODO implement as macro
@@ -15,17 +15,32 @@ class ClockModel: ObservableObject {
 	@Published private var rawSeconds: Int
 	@Published var relaxingTime: TimeInterval = 0
 	
+	@AppStorage("actual") var actualId = 0
+	@AppStorage("profilesString") var profiles = [Profile]()
+	
 	var isPaused: Bool { !timer.isValid }
 
 	var duration: TimeInterval { TimeInterval(rawSeconds) }
 	var relaxDuration: TimeInterval { TimeInterval(rawSeconds / 5) }
 	
+	var actualProfile: Profile {
+		if profiles.count == 0 {
+			profiles.append(Profile(title: "Default"))
+		}
+		
+		if profiles.count <= actualId {
+			actualId = 0
+		}
+		
+		return profiles[actualId]
+	}
+	
 	var actualTotal: TimeInterval {
-		StorageManager.actualProfile.total.advanced(by: duration)
+		actualProfile.total.advanced(by: duration)
 	}
 	
 	var actualRecord: TimeInterval {
-		max(duration, StorageManager.actualProfile.record)
+		max(duration, actualProfile.record)
 	}
 	
 	private init(_ seconds: Int = 0) {

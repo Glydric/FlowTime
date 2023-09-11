@@ -13,24 +13,13 @@ struct MenuBar: Scene {
 	@StateObject private var relaxModel: RelaxModel = RelaxModel(ClockModel.shared.relaxingTime)
 	
 	@AppStorage("settings.showTimer") private var showTimer = true
-	@AppStorage("actual") var actualId = 0
-	@AppStorage("profilesString") var profiles = [Profile]()
 	
-	private var others: [Profile] {
-		StorageManager.profile.filter { $0 != StorageManager.actualProfile }
-	}
+	@State var alert = 25
 	
-	private var actual: Profile {
-		if profiles.count == 0 {
-			profiles.append(Profile(title: "Default"))
-		}
-		
-		if profiles.count <= actualId {
-			actualId = 0
-		}
-		
-		return profiles[actualId]
-	}
+	private var profiles: [Profile] { clockModel.profiles }
+	private var actual: Profile { clockModel.actualProfile }
+	private var others: [Profile] { profiles.filter { $0 != actual } }
+	
 	
 	var body: some Scene {
 		MenuBarExtra(
@@ -48,10 +37,17 @@ struct MenuBar: Scene {
 						}
 					}
 					
-					Button(action: clockModel.reset) {
-						Image(systemName: "trash.fill")
-						Text("Cancel")
+					if(!clockModel.isPaused){
+						Button(action: clockModel.reset) {
+							Image(systemName: "trash.fill")
+							Text("Cancel")
+						}
 					}
+					
+					Button("Open View"){
+						NSApplication.shared.activate(ignoringOtherApps: true)
+						openWindow(id: "MainScreen")
+					}.keyboardShortcut("n")
 					
 					Divider()
 				}
@@ -68,27 +64,14 @@ struct MenuBar: Scene {
 					}
 				}
 				
-				Button(action: {
-					NSApplication.shared.activate(ignoringOtherApps: true)
-					openWindow(id: "EditProfile")
-				}, label: {
+				Text("Total ~ \(clockModel.actualTotal.minuteSecond)")
+					
+				Text("Record ~ \(clockModel.actualRecord.minuteSecond)")
+				
+				Button(action: openEditProfile, label: {
 					Image(systemName: "pencil")
 					Text("Edit Profiles")
 				})
-				
-				Text("Total ~ \(clockModel.actualTotal.minuteSecond)")
-					.foregroundColor(.black)
-				Text("Record ~ \(clockModel.actualRecord.minuteSecond)")
-				
-				Button(action: {StorageManager.actualProfile.reset()}) {
-					Image(systemName: "gobackward")
-					Text("Reset")
-				}
-				
-				Button("Open View"){
-					NSApplication.shared.activate(ignoringOtherApps: true)
-					openWindow(id: "MainScreen")
-				}.keyboardShortcut("n")
 				
 				Divider()
 				
@@ -119,6 +102,11 @@ struct MenuBar: Scene {
 				}
 			}
 		)
+	}
+	
+	func openEditProfile() {
+		NSApplication.shared.activate(ignoringOtherApps: true)
+		openWindow(id: "EditProfile")
 	}
 }
 

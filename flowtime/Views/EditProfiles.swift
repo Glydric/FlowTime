@@ -90,6 +90,11 @@ struct EditProfile: View {
 			
 			Text(p.total.minuteSecond)
 			
+			Button(action: {profiles[index].reset()}) {
+				Image(systemName: "gobackward")
+				Text("Reset")
+			}
+			
 			if(profiles.count > 1){
 				Button(
 					action: { profiles.removeFirst(p) },
