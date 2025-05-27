@@ -1,41 +1,45 @@
-# Xcode Project
-**/*.xcodeproj/xcuserdata/
-**/*.xcworkspace/xcuserdata/
-**/.swiftpm/xcode/xcuserdata/
-**/*.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
-**/*.xcworkspace/xcshareddata/*.xccheckout
-**/*.xcworkspace/xcshareddata/*.xcscmblueprint
-**/*.playground/**/timeline.xctimeline
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
 .idea/
 
-# Build
-Scripts/build/
-build/
-DerivedData/
-*.ipa
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
 
-# Carthage
-Carthage/
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
 
-# CocoaPods
-Pods/
+# Symbolication related
+app.*.symbols
 
-# fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
-fastlane/sign&cert
+# Obfuscation related
+app.*.map.json
 
-# CSV
-*.orig
-.svn
-
-# Other
-*~
-.DS_Store
-*.swp
-*.save
-._*
-*.bak
-
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
