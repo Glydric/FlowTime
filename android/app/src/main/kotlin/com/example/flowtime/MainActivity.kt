@@ -1,4 +1,4 @@
-package com.example.flowtime
+package dev.miglio.flowtime
 
 import io.flutter.embedding.android.FlutterActivity
 
