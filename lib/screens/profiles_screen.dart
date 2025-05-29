@@ -8,95 +8,98 @@ class ProfilesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final profilesProvider = Provider.of<ProfilesProvider>(context);
-    
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profiles'),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),
-            onPressed: () {
-              _showAddEditProfileDialog(context);
-            },
+            onPressed: () => _showAddEditProfileDialog(context),
           ),
         ],
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(16),
-        itemCount: profilesProvider.profiles.length,
-        itemBuilder: (context, index) {
-          final profile = profilesProvider.profiles[index];
-          final isSelected = index == profilesProvider.selectedProfileIndex;
-          
-          return Card(
-            elevation: isSelected ? 4 : 1,
-            margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-              side: isSelected 
-                  ? BorderSide(color: profile.color, width: 2)
-                  : BorderSide.none,
-            ),
-            child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              leading: Container(
-                width: 24,
-                height: 24,
-                decoration: BoxDecoration(
-                  color: profile.color,
-                  shape: BoxShape.circle,
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 600),
+          child: ListView.builder(
+            padding: const EdgeInsets.all(16),
+            itemCount: profilesProvider.profiles.length,
+            itemBuilder: (context, index) {
+              final profile = profilesProvider.profiles[index];
+              final isSelected = index == profilesProvider.selectedProfileIndex;
+
+              return Card(
+                elevation: isSelected ? 4 : 1,
+                margin: const EdgeInsets.only(bottom: 12),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: isSelected
+                      ? BorderSide(color: profile.color, width: 2)
+                      : BorderSide.none,
                 ),
-              ),
-              title: Text(
-                profile.name,
-                style: const TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              subtitle: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 4),
-                  Text(
-                    'Sessions: ${profile.totalSessions}',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
+                child: ListTile(
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  leading: Container(
+                    width: 24,
+                    height: 24,
+                    decoration: BoxDecoration(
+                      color: profile.color,
+                      shape: BoxShape.circle,
                     ),
                   ),
-                  Text(
-                    'Total time: ${_formatTotalTime(profile.totalSeconds)}',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
+                  title: Text(
+                    profile.name,
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
-                ],
-              ),
-              trailing: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (isSelected)
-                    const Icon(Icons.check_circle, color: Colors.green),
-                  IconButton(
-                    icon: const Icon(Icons.edit),
-                    onPressed: () {
-                      _showAddEditProfileDialog(context, profile: profile, index: index);
-                    },
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 4),
+                      Text(
+                        'Sessions: ${profile.totalSessions}',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                      ),
+                      Text(
+                        'Total time: ${_formatTotalTime(profile.totalSeconds)}',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.secondary,
+                        ),
+                      ),
+                    ],
                   ),
-                  IconButton(
-                    icon: const Icon(Icons.delete),
-                    onPressed: () {
-                      _showDeleteConfirmation(context, index);
-                    },
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.edit),
+                        onPressed: () => _showAddEditProfileDialog(
+                          context,
+                          profile: profile,
+                          index: index,
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.delete),
+                        onPressed: () =>
+                            _showDeleteConfirmation(context, index),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-              onTap: () {
-                profilesProvider.selectProfileByIndex(index);
-                Navigator.pop(context);
-              },
-            ),
-          );
-        },
+                  onTap: () {
+                    profilesProvider.selectProfileByIndex(index);
+                    Navigator.pop(context);
+                  },
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }
@@ -104,32 +107,28 @@ class ProfilesScreen extends StatelessWidget {
   String _formatTotalTime(int totalSeconds) {
     final hours = totalSeconds ~/ 3600;
     final minutes = (totalSeconds % 3600) ~/ 60;
-    
-    if (hours > 0) {
-      return '$hours h ${minutes.toString().padLeft(2, '0')} min';
-    } else {
-      return '$minutes min';
-    }
+
+    return hours > 0
+        ? '$hours h ${minutes.toString().padLeft(2, '0')} min'
+        : '$minutes min';
   }
 
   void _showAddEditProfileDialog(
     BuildContext context, {
     Profile? profile,
     int? index,
-  }) {
-    showDialog(
-      context: context,
-      builder: (context) => ProfileDialog(
-        profile: profile,
-        index: index,
-      ),
-    );
-  }
+  }) => showDialog(
+    context: context,
+    builder: (context) => ProfileDialog(profile: profile, index: index),
+  );
 
   void _showDeleteConfirmation(BuildContext context, int index) {
-    final profilesProvider = Provider.of<ProfilesProvider>(context, listen: false);
+    final profilesProvider = Provider.of<ProfilesProvider>(
+      context,
+      listen: false,
+    );
     final profile = profilesProvider.profiles[index];
-    
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -143,7 +142,6 @@ class ProfilesScreen extends StatelessWidget {
             },
           ),
           TextButton(
-            child: const Text('Delete'),
             style: TextButton.styleFrom(
               foregroundColor: Theme.of(context).colorScheme.error,
             ),
@@ -151,6 +149,7 @@ class ProfilesScreen extends StatelessWidget {
               profilesProvider.deleteProfile(index);
               Navigator.pop(context);
             },
+            child: const Text('Delete'),
           ),
         ],
       ),
@@ -161,12 +160,8 @@ class ProfilesScreen extends StatelessWidget {
 class ProfileDialog extends StatefulWidget {
   final Profile? profile;
   final int? index;
-  
-  const ProfileDialog({
-    super.key,
-    this.profile,
-    this.index,
-  });
+
+  const ProfileDialog({super.key, this.profile, this.index});
 
   @override
   State<ProfileDialog> createState() => _ProfileDialogState();
@@ -175,7 +170,7 @@ class ProfileDialog extends StatefulWidget {
 class _ProfileDialogState extends State<ProfileDialog> {
   late TextEditingController _nameController;
   late Color _selectedColor;
-  
+
   final List<Color> _colorOptions = [
     Colors.blue,
     Colors.red,
@@ -188,6 +183,8 @@ class _ProfileDialogState extends State<ProfileDialog> {
     Colors.amber,
     Colors.cyan,
   ];
+
+  get isEditing => widget.profile != null;
 
   @override
   void initState() {
@@ -203,101 +200,94 @@ class _ProfileDialogState extends State<ProfileDialog> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final isEditing = widget.profile != null;
-    
-    return AlertDialog(
-      title: Text(isEditing ? 'Edit Profile' : 'New Profile'),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          TextField(
-            controller: _nameController,
-            decoration: const InputDecoration(
-              labelText: 'Profile Name',
-              border: OutlineInputBorder(),
-            ),
-            autofocus: true,
+  Widget build(BuildContext context) => AlertDialog(
+    title: Text(isEditing ? 'Edit Profile' : 'New Profile'),
+    content: Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        TextField(
+          controller: _nameController,
+          decoration: const InputDecoration(
+            labelText: 'Profile Name',
+            border: OutlineInputBorder(),
           ),
-          const SizedBox(height: 24),
-          const Text('Select Color'),
-          const SizedBox(height: 12),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: _colorOptions.map((color) {
-              final isSelected = _selectedColor.value == color.value;
-              return GestureDetector(
-                onTap: () {
-                  setState(() {
-                    _selectedColor = color;
-                  });
-                },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: color,
-                    shape: BoxShape.circle,
-                    border: isSelected
-                        ? Border.all(color: Colors.white, width: 3)
-                        : null,
-                    boxShadow: isSelected
-                        ? [
-                            BoxShadow(
-                              color: color.withOpacity(0.5),
-                              blurRadius: 8,
-                              spreadRadius: 2,
-                            )
-                          ]
-                        : null,
-                  ),
-                ),
-              );
-            }).toList(),
-          ),
-        ],
-      ),
-      actions: [
-        TextButton(
-          child: const Text('Cancel'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          autofocus: true,
         ),
-        TextButton(
-          child: Text(isEditing ? 'Update' : 'Create'),
-          onPressed: () {
-            final name = _nameController.text.trim();
-            if (name.isEmpty) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Please enter a profile name')),
-              );
-              return;
-            }
-            
-            final profilesProvider = Provider.of<ProfilesProvider>(context, listen: false);
-            
-            if (isEditing) {
-              final updatedProfile = Profile(
-                name: name,
-                color: _selectedColor,
-                totalSeconds: widget.profile!.totalSeconds,
-                totalSessions: widget.profile!.totalSessions,
-              );
-              profilesProvider.updateProfile(widget.index!, updatedProfile);
-            } else {
-              final newProfile = Profile(
-                name: name,
-                color: _selectedColor,
-              );
-              profilesProvider.addProfile(newProfile);
-            }
-            
-            Navigator.pop(context);
-          },
+        const SizedBox(height: 24),
+        const Text('Select Color'),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: _colorOptions.map((color) {
+            final isSelected = _selectedColor.value == color.value;
+            return GestureDetector(
+              onTap: () => setState(() {
+                _selectedColor = color;
+              }),
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: color,
+                  shape: BoxShape.circle,
+                  border: isSelected
+                      ? Border.all(color: Colors.white, width: 3)
+                      : null,
+                  boxShadow: isSelected
+                      ? [
+                          BoxShadow(
+                            color: color.withOpacity(0.5),
+                            blurRadius: 8,
+                            spreadRadius: 2,
+                          ),
+                        ]
+                      : null,
+                ),
+              ),
+            );
+          }).toList(),
         ),
       ],
+    ),
+    actions: [
+      TextButton(
+        child: const Text('Cancel'),
+        onPressed: () => Navigator.pop(context),
+      ),
+      ListenableBuilder(
+        listenable: _nameController,
+        builder: (context, _) => TextButton(
+          onPressed: _nameController.text.trim().isEmpty
+              ? null
+              : () => createOrUpdate(context),
+          child: Text(isEditing ? 'Update' : 'Create'),
+        ),
+      ),
+    ],
+  );
+
+  void createOrUpdate(context) {
+    final name = _nameController.text.trim();
+
+    final profilesProvider = Provider.of<ProfilesProvider>(
+      context,
+      listen: false,
     );
+
+    if (isEditing) {
+      final updatedProfile = Profile(
+        name: name,
+        color: _selectedColor,
+        totalSeconds: widget.profile!.totalSeconds,
+        totalSessions: widget.profile!.totalSessions,
+      );
+      profilesProvider.updateProfile(widget.index!, updatedProfile);
+    } else {
+      final newProfile = Profile(name: name, color: _selectedColor);
+      profilesProvider.addProfile(newProfile);
+    }
+
+    Navigator.pop(context);
   }
 }
