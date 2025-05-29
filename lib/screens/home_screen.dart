@@ -1,5 +1,3 @@
-import 'dart:developer' show log;
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flowtime/models/clock_model.dart';
@@ -34,80 +32,88 @@ class HomeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         spacing: 40,
         children: [
-          _buildProfileSelector(
-            context,
-            Provider.of<ProfilesProvider>(context),
-          ),
+          _buildProfileSelector(context),
           _buildClock(context),
-          _buildControls(context, Provider.of<ClockModel>(context)),
+          _buildControls(context),
         ],
       ),
     ),
   );
 
-  Widget _buildProfileSelector(
-    BuildContext context,
-    ProfilesProvider profilesProvider,
-  ) => Row(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      DropdownMenu<Profile>(
-        // todo make the user lose focus when clicking outside the dropdown (and perform a profile == null)e
-        width: 160,
-        enableSearch: false,
-        // enableFilter: true,
-        initialSelection: profilesProvider.selectedProfile,
-        onSelected: (Profile? profile) {
-          if (profile != null) {
-            profilesProvider.selectProfile(profile);
-          } else {
-            profilesProvider.refreshProfiles();
-          }
-        },
-        inputDecorationTheme: InputDecorationTheme(
-          isDense: true,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
-            borderSide: BorderSide.none,
+  Widget _buildProfileSelector(BuildContext context) {
+    final ProfilesProvider profilesProvider = Provider.of(context);
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        PopupMenuButton<Profile>(
+          initialValue: profilesProvider.selectedProfile,
+          onSelected: profilesProvider.selectProfile,
+          itemBuilder: (BuildContext context) => profilesProvider.profiles
+              .map(
+                (profile) => PopupMenuItem<Profile>(
+                  value: profile,
+                  child: Row(
+                    children: [
+                      Icon(Icons.circle, color: profile.color, size: 16),
+                      const SizedBox(width: 8),
+                      Text(
+                        profile.name,
+                        style: TextStyle(
+                          fontWeight:
+                              profile == profilesProvider.selectedProfile
+                              ? FontWeight.bold
+                              : FontWeight.normal,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              )
+              .toList(),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+            decoration: BoxDecoration(
+              color: profilesProvider.selectedProfile.color.withAlpha(51),
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.circle,
+                  color: profilesProvider.selectedProfile.color,
+                  size: 16,
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  profilesProvider.selectedProfile.name,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: profilesProvider.selectedProfile.color,
+                  ),
+                ),
+                const SizedBox(width: 8),
+                const Icon(Icons.arrow_drop_down),
+              ],
+            ),
           ),
-          filled: true,
-          fillColor: profilesProvider.selectedProfile.color.withOpacity(0.2),
         ),
-        textStyle: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.bold,
-          color: profilesProvider.selectedProfile.color,
+        const SizedBox(width: 8),
+        IconButton(
+          icon: const Icon(Icons.edit),
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ProfilesScreen()),
+          ),
+          tooltip: 'Edit Profiles',
         ),
-        leadingIcon: Icon(
-          Icons.circle,
-          color: profilesProvider.selectedProfile.color,
-          size: 16,
-        ),
-        dropdownMenuEntries: profilesProvider.profiles
-            .map(
-              (profile) => DropdownMenuEntry<Profile>(
-                value: profile,
-                label: profile.name,
-                leadingIcon: Icon(Icons.circle, color: profile.color, size: 16),
-              ),
-            )
-            .toList(),
-      ),
-      const SizedBox(width: 8),
-      IconButton(
-        icon: const Icon(Icons.edit),
-        onPressed: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => const ProfilesScreen()),
-        ),
-        tooltip: 'Edit Profiles',
-      ),
-    ],
-  );
+      ],
+    );
+  }
 
   Widget _buildClock(BuildContext context) {
-    final clockModel = Provider.of<ClockModel>(context);
-
+    final ClockModel clockModel = Provider.of(context);
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -129,35 +135,37 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildControls(BuildContext context, ClockModel clockModel) =>
-      !clockModel.isRunning
-      ? ElevatedButton.icon(
-          icon: const Icon(Icons.play_arrow),
-          label: const Text('Start'),
-          onPressed: clockModel.start,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Theme.of(context).colorScheme.primary,
-            foregroundColor: Theme.of(context).colorScheme.onPrimary,
-          ),
-        )
-      : Padding(
-          padding: const EdgeInsets.only(left: 16),
-          child: ElevatedButton.icon(
+  Widget _buildControls(BuildContext context) {
+    final ClockModel clockModel = Provider.of(context);
+    return !clockModel.isRunning
+        ? ElevatedButton.icon(
+            icon: const Icon(Icons.play_arrow),
+            label: const Text('Start'),
+            onPressed: clockModel.start,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              foregroundColor: Theme.of(context).colorScheme.onPrimary,
+            ),
+          )
+        : ElevatedButton.icon(
             icon: const Icon(Icons.stop),
             label: const Text('Take a Break'),
-            onPressed: () => _finishSession(context, clockModel),
+            onPressed: () => _finishSession(context),
             style: ElevatedButton.styleFrom(
               backgroundColor: Theme.of(context).colorScheme.error,
               foregroundColor: Theme.of(context).colorScheme.onError,
             ),
-          ),
-        );
+          );
+  }
 
-  Future<void> _finishSession(
-    BuildContext context,
-    ClockModel clockModel,
-  ) async {
-    final profilesProvider = Provider.of<ProfilesProvider>(context);
+  Future<void> _finishSession(BuildContext context) async {
+    final ClockModel clockModel = Provider.of(context, listen: false);
+    if (clockModel.elapsedSeconds == 0) return;
+
+    final ProfilesProvider profilesProvider = Provider.of(
+      context,
+      listen: false,
+    );
     profilesProvider.addSessionToSelectedProfile(clockModel.elapsedSeconds);
 
     clockModel.finish();
@@ -170,7 +178,7 @@ class HomeScreen extends StatelessWidget {
             RelaxScreen(relaxModel: RelaxModel.fromClockModel(clockModel)),
       ),
     );
-    //   after break concluded, reset clock
+    // after break concluded, reset clock
     clockModel.reset();
   }
 }

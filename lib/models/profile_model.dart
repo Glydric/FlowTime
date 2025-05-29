@@ -47,7 +47,7 @@ class ProfilesProvider extends ChangeNotifier {
 
   Profile get selectedProfile => _profiles.isNotEmpty
       ? _profiles[_selectedProfileIndex]
-      : _createDefaultProfile();
+      : _newDefault();
 
   int get selectedProfileIndex => _selectedProfileIndex;
 
@@ -58,7 +58,7 @@ class ProfilesProvider extends ChangeNotifier {
         jsonDecode(profilesJson).map((x) => Profile.fromJson(x)),
       );
     } else {
-      _profiles = [_createDefaultProfile()];
+      _profiles = [_newDefault()];
     }
 
     final selectedIndex = await StorageManager.getSelectedProfileIndex();
@@ -107,7 +107,7 @@ class ProfilesProvider extends ChangeNotifier {
         _selectedProfileIndex = _profiles.length - 1;
       }
       if (_profiles.isEmpty) {
-        _profiles.add(_createDefaultProfile());
+        _profiles.add(_newDefault());
         _selectedProfileIndex = 0;
       }
       saveProfiles();
@@ -121,12 +121,7 @@ class ProfilesProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  Profile _createDefaultProfile() {
+  Profile _newDefault() {
     return Profile(name: 'Default', color: Colors.blue);
-  }
-
-  refreshProfiles() async {
-    await _loadProfiles();
-    notifyListeners();
   }
 }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' show min;
 import 'package:flowtime/models/clock_model.dart' show ClockModel;
 import 'package:flutter/foundation.dart';
 
@@ -6,23 +7,20 @@ enum RelaxState { idle, running, paused, finished }
 
 class RelaxModel extends ChangeNotifier {
   final int _originalSeconds;
-  int _elapsedSeconds = 0;
+  int _remainingSeconds;
   Timer? _timer;
 
   RelaxModel.fromClockModel(ClockModel clockModel)
     : _originalSeconds = (clockModel.elapsedSeconds * 0.2).round(),
-      _elapsedSeconds = (clockModel.elapsedSeconds * 0.2).round();
+      _remainingSeconds = (clockModel.elapsedSeconds * 0.2).round();
 
   bool get isRunning => _timer?.isActive ?? false;
 
-  bool get isTimeUp =>
-      _elapsedSeconds >= _originalSeconds && _originalSeconds > 0;
-
-  int get elapsedSeconds => _elapsedSeconds;
+  int get remainingSeconds => min(_originalSeconds, _remainingSeconds);
 
   String get formattedTime {
-    final minutes = _elapsedSeconds ~/ 60;
-    final remainingSeconds = _elapsedSeconds % 60;
+    final minutes = _remainingSeconds ~/ 60;
+    final remainingSeconds = _remainingSeconds % 60;
 
     return '${minutes.toString().padLeft(2, '0')}:${remainingSeconds.toString().padLeft(2, '0')}';
   }
@@ -33,10 +31,6 @@ class RelaxModel extends ChangeNotifier {
 
     return '${minutes.toString().padLeft(2, '0')}:${remainingSeconds.toString().padLeft(2, '0')}';
   }
-
-  int get remainingSeconds => _originalSeconds > _elapsedSeconds
-      ? _originalSeconds - _elapsedSeconds
-      : 0;
 
   String get formattedRemainingTime {
     final minutes = remainingSeconds ~/ 60;
@@ -52,32 +46,17 @@ class RelaxModel extends ChangeNotifier {
   }
 
   void start() {
-    if (!isRunning) {
-      _elapsedSeconds = 0;
-    }
+    if (isRunning) return;
 
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      _elapsedSeconds++;
-
-      if (isTimeUp && isRunning) {
-        finish();
+      if (_remainingSeconds <= 0) {
+        _timer?.cancel();
+      } else {
+        _remainingSeconds--;
       }
 
-      notifyListeners();
+      if (isRunning) notifyListeners();
     });
-    notifyListeners();
-  }
-
-  void pause() {
-    if (isRunning) {
-      _timer?.cancel();
-      notifyListeners();
-    }
-  }
-
-  void finish() {
-    _timer?.cancel();
-    notifyListeners();
   }
 }
